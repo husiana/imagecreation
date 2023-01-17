@@ -1,0 +1,1357 @@
+[1;32mazure-arm: output will be in this color.[0m
+
+[1;32m2023-01-16T16:29:29+01:00: ==> azure-arm: Running builder ...[0m
+[1;32m2023-01-16T16:29:29+01:00: ==> azure-arm: Getting tokens using Azure CLI[0m
+[1;32m2023-01-16T16:29:30+01:00: ==> azure-arm: Getting tokens using Azure CLI[0m
+[0;32m2023-01-16T16:29:30+01:00:     azure-arm: Creating Azure Resource Manager (ARM) client ...[0m
+[1;32m2023-01-16T16:29:31+01:00: ==> azure-arm: Getting source image id for the deployment ...[0m
+[1;32m2023-01-16T16:29:31+01:00: ==> azure-arm:  -> SourceImageName: '/subscriptions/083763cf-8f75-4112-9ee5-2e09045c8c8f/providers/Microsoft.Compute/locations/westeurope/publishers/almalinux/ArtifactTypes/vmimage/offers/almalinux-hpc/skus/8_5-hpc-gen2/versions/8.5.20211210'[0m
+[1;32m2023-01-16T16:29:31+01:00: ==> azure-arm: Using existing resource group ...[0m
+[1;32m2023-01-16T16:29:31+01:00: ==> azure-arm:  -> ResourceGroupName : 'rgsig'[0m
+[1;32m2023-01-16T16:29:31+01:00: ==> azure-arm:  -> Location          : 'westeurope'[0m
+[1;32m2023-01-16T16:29:31+01:00: ==> azure-arm: Validating deployment template ...[0m
+[1;32m2023-01-16T16:29:31+01:00: ==> azure-arm:  -> ResourceGroupName : 'rgsig'[0m
+[1;32m2023-01-16T16:29:31+01:00: ==> azure-arm:  -> DeploymentName    : 'pkrdphw08evczwj'[0m
+[1;32m2023-01-16T16:29:36+01:00: ==> azure-arm: Deploying deployment template ...[0m
+[1;32m2023-01-16T16:29:36+01:00: ==> azure-arm:  -> ResourceGroupName : 'rgsig'[0m
+[1;32m2023-01-16T16:29:36+01:00: ==> azure-arm:  -> DeploymentName    : 'pkrdphw08evczwj'[0m
+[1;32m2023-01-16T16:31:40+01:00: ==> azure-arm:[0m
+[1;32m2023-01-16T16:31:40+01:00: ==> azure-arm: Getting the VM's IP address ...[0m
+[1;32m2023-01-16T16:31:40+01:00: ==> azure-arm:  -> ResourceGroupName   : 'rgsig'[0m
+[1;32m2023-01-16T16:31:40+01:00: ==> azure-arm:  -> PublicIPAddressName : 'pkriphw08evczwj'[0m
+[1;32m2023-01-16T16:31:40+01:00: ==> azure-arm:  -> NicName             : 'pkrnihw08evczwj'[0m
+[1;32m2023-01-16T16:31:40+01:00: ==> azure-arm:  -> Network Connection  : 'PublicEndpoint'[0m
+[1;32m2023-01-16T16:31:40+01:00: ==> azure-arm:  -> IP Address          : '20.16.24.181'[0m
+[1;32m2023-01-16T16:31:40+01:00: ==> azure-arm: Waiting for SSH to become available...[0m
+[1;32m2023-01-16T16:31:41+01:00: ==> azure-arm: Connected to SSH![0m
+[1;32m2023-01-16T16:31:41+01:00: ==> azure-arm: Uploading scripts/almalinux/ => /tmp[0m
+[1;32m2023-01-16T16:31:41+01:00: ==> azure-arm: Provisioning with shell script: /tmp/packer-shell2166860342[0m
+[0;32m2023-01-16T16:31:48+01:00:     azure-arm: AlmaLinux 8 - BaseOS                            4.9 MB/s | 4.0 MB     00:00[0m
+[0;32m2023-01-16T16:31:50+01:00:     azure-arm: AlmaLinux 8 - AppStream                          14 MB/s |  11 MB     00:00[0m
+[0;32m2023-01-16T16:31:52+01:00:     azure-arm: AlmaLinux 8 - Extras                             34 kB/s |  18 kB     00:00[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm: Package dnf-plugins-core-4.0.21-3.el8.noarch is already installed.[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm: Dependencies resolved.[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:  Package                         Arch    Version                  Repo     Size[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm: Upgrading:[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:  [1m[32mdnf                            (B[m noarch  4.7.0-11.el8.alma        baseos  540 k[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:  [1m[32mdnf-data                       (B[m noarch  4.7.0-11.el8.alma        baseos  154 k[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:  [1m[32mdnf-plugins-core               (B[m noarch  4.0.21-14.1.el8          baseos   71 k[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:  [1m[32mjson-c                         (B[m x86_64  0.13.1-3.el8             baseos   40 k[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:  [1m[32mlibdnf                         (B[m x86_64  0.63.0-11.1.el8.alma     baseos  708 k[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:  [1m[32mlibsolv                        (B[m x86_64  0.7.20-4.el8_7           baseos  375 k[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:  [1m[32mpython3-dnf                    (B[m noarch  4.7.0-11.el8.alma        baseos  546 k[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:  [1m[32mpython3-dnf-plugin-versionlock (B[m noarch  4.0.21-14.1.el8          baseos   63 k[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:  [1m[32mpython3-dnf-plugins-core       (B[m noarch  4.0.21-14.1.el8          baseos  242 k[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:  [1m[32mpython3-hawkey                 (B[m x86_64  0.63.0-11.1.el8.alma     baseos  116 k[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:  [1m[32mpython3-libdnf                 (B[m x86_64  0.63.0-11.1.el8.alma     baseos  778 k[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:  [1m[32myum                            (B[m noarch  4.7.0-11.el8.alma        baseos  205 k[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:  [1m[32myum-utils                      (B[m noarch  4.0.21-14.1.el8          baseos   73 k[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm: Transaction Summary[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm: Upgrade  13 Packages[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm: Total download size: 3.8 M[0m
+[0;32m2023-01-16T16:31:53+01:00:     azure-arm: Downloading Packages:[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: (1/13): dnf-plugins-core-4.0.21-14.1.el8.noarch 908 kB/s |  71 kB     00:00[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: (2/13): dnf-data-4.7.0-11.el8.alma.noarch.rpm   1.6 MB/s | 154 kB     00:00[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: (3/13): json-c-0.13.1-3.el8.x86_64.rpm          1.6 MB/s |  40 kB     00:00[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: (4/13): dnf-4.7.0-11.el8.alma.noarch.rpm        4.1 MB/s | 540 kB     00:00[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: (5/13): python3-dnf-4.7.0-11.el8.alma.noarch.rp  13 MB/s | 546 kB     00:00[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: (6/13): libdnf-0.63.0-11.1.el8.alma.x86_64.rpm  7.5 MB/s | 708 kB     00:00[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: (7/13): libsolv-0.7.20-4.el8_7.x86_64.rpm       3.8 MB/s | 375 kB     00:00[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: (8/13): python3-dnf-plugin-versionlock-4.0.21-1 1.8 MB/s |  63 kB     00:00[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: (9/13): python3-dnf-plugins-core-4.0.21-14.1.el 9.6 MB/s | 242 kB     00:00[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: (10/13): python3-hawkey-0.63.0-11.1.el8.alma.x8 4.9 MB/s | 116 kB     00:00[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: (11/13): yum-4.7.0-11.el8.alma.noarch.rpm       7.5 MB/s | 205 kB     00:00[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: (12/13): yum-utils-4.0.21-14.1.el8.noarch.rpm   2.9 MB/s |  73 kB     00:00[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: (13/13): python3-libdnf-0.63.0-11.1.el8.alma.x8  13 MB/s | 778 kB     00:00[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: --------------------------------------------------------------------------------[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: Total                                           5.9 MB/s | 3.8 MB     00:00[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: Running transaction check[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: Transaction check succeeded.[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: Running transaction test[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: Transaction test succeeded.[0m
+[0;32m2023-01-16T16:31:54+01:00:     azure-arm: Running transaction[0m
+[0;32m2023-01-16T16:31:55+01:00:     azure-arm:   Preparing        :                                                        1/1[0m
+[0;32m2023-01-16T16:31:55+01:00:     azure-arm:   Running scriptlet: libsolv-0.7.20-4.el8_7.x86_64                          1/1[0m
+[0;32m2023-01-16T16:31:55+01:00:     azure-arm:   Upgrading        : libsolv-0.7.20-4.el8_7.x86_64                         1/26[0m
+[0;32m2023-01-16T16:31:55+01:00:     azure-arm:   Upgrading        : json-c-0.13.1-3.el8.x86_64                            2/26[0m
+[0;32m2023-01-16T16:31:55+01:00:     azure-arm:   Upgrading        : libdnf-0.63.0-11.1.el8.alma.x86_64                    3/26[0m
+[0;32m2023-01-16T16:31:56+01:00:     azure-arm:   Upgrading        : python3-libdnf-0.63.0-11.1.el8.alma.x86_64            4/26[0m
+[0;32m2023-01-16T16:31:56+01:00:     azure-arm:   Upgrading        : python3-hawkey-0.63.0-11.1.el8.alma.x86_64            5/26[0m
+[0;32m2023-01-16T16:31:56+01:00:     azure-arm:   Upgrading        : dnf-data-4.7.0-11.el8.alma.noarch                     6/26[0m
+[0;32m2023-01-16T16:31:56+01:00:     azure-arm:   Upgrading        : python3-dnf-4.7.0-11.el8.alma.noarch                  7/26[0m
+[0;32m2023-01-16T16:31:56+01:00:     azure-arm:   Upgrading        : dnf-4.7.0-11.el8.alma.noarch                          8/26[0m
+[0;32m2023-01-16T16:31:56+01:00:     azure-arm:   Running scriptlet: dnf-4.7.0-11.el8.alma.noarch                          8/26[0m
+[0;32m2023-01-16T16:31:56+01:00:     azure-arm:   Upgrading        : python3-dnf-plugins-core-4.0.21-14.1.el8.noarch       9/26[0m
+[0;32m2023-01-16T16:31:56+01:00:     azure-arm:   Upgrading        : dnf-plugins-core-4.0.21-14.1.el8.noarch              10/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Upgrading        : yum-utils-4.0.21-14.1.el8.noarch                     11/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Upgrading        : python3-dnf-plugin-versionlock-4.0.21-14.1.el8.noa   12/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Upgrading        : yum-4.7.0-11.el8.alma.noarch                         13/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Cleanup          : yum-utils-4.0.21-3.el8.noarch                        14/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Cleanup          : dnf-plugins-core-4.0.21-3.el8.noarch                 15/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Cleanup          : yum-4.7.0-4.el8.noarch                               16/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Running scriptlet: dnf-4.7.0-4.el8.noarch                               17/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Cleanup          : dnf-4.7.0-4.el8.noarch                               17/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Running scriptlet: dnf-4.7.0-4.el8.noarch                               17/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Cleanup          : python3-dnf-plugin-versionlock-4.0.21-3.el8.noarch   18/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Cleanup          : python3-dnf-plugins-core-4.0.21-3.el8.noarch         19/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Cleanup          : python3-dnf-4.7.0-4.el8.noarch                       20/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Cleanup          : python3-hawkey-0.63.0-3.el8.x86_64                   21/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Cleanup          : dnf-data-4.7.0-4.el8.noarch                          22/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Cleanup          : python3-libdnf-0.63.0-3.el8.x86_64                   23/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Cleanup          : libdnf-0.63.0-3.el8.x86_64                           24/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Cleanup          : json-c-0.13.1-2.el8.x86_64                           25/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Cleanup          : libsolv-0.7.19-1.el8.x86_64                          26/26[0m
+[0;32m2023-01-16T16:31:57+01:00:     azure-arm:   Running scriptlet: libsolv-0.7.19-1.el8.x86_64                          26/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : dnf-4.7.0-11.el8.alma.noarch                          1/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : dnf-4.7.0-4.el8.noarch                                2/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : dnf-data-4.7.0-11.el8.alma.noarch                     3/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : dnf-data-4.7.0-4.el8.noarch                           4/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : dnf-plugins-core-4.0.21-14.1.el8.noarch               5/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : dnf-plugins-core-4.0.21-3.el8.noarch                  6/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : json-c-0.13.1-3.el8.x86_64                            7/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : json-c-0.13.1-2.el8.x86_64                            8/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : libdnf-0.63.0-11.1.el8.alma.x86_64                    9/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : libdnf-0.63.0-3.el8.x86_64                           10/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : libsolv-0.7.20-4.el8_7.x86_64                        11/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : libsolv-0.7.19-1.el8.x86_64                          12/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : python3-dnf-4.7.0-11.el8.alma.noarch                 13/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : python3-dnf-4.7.0-4.el8.noarch                       14/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : python3-dnf-plugin-versionlock-4.0.21-14.1.el8.noa   15/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : python3-dnf-plugin-versionlock-4.0.21-3.el8.noarch   16/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : python3-dnf-plugins-core-4.0.21-14.1.el8.noarch      17/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : python3-dnf-plugins-core-4.0.21-3.el8.noarch         18/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : python3-hawkey-0.63.0-11.1.el8.alma.x86_64           19/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : python3-hawkey-0.63.0-3.el8.x86_64                   20/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : python3-libdnf-0.63.0-11.1.el8.alma.x86_64           21/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : python3-libdnf-0.63.0-3.el8.x86_64                   22/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : yum-4.7.0-11.el8.alma.noarch                         23/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : yum-4.7.0-4.el8.noarch                               24/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : yum-utils-4.0.21-14.1.el8.noarch                     25/26[0m
+[0;32m2023-01-16T16:31:58+01:00:     azure-arm:   Verifying        : yum-utils-4.0.21-3.el8.noarch                        26/26[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm: Upgraded:[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:   dnf-4.7.0-11.el8.alma.noarch[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:   dnf-data-4.7.0-11.el8.alma.noarch[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:   dnf-plugins-core-4.0.21-14.1.el8.noarch[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:   json-c-0.13.1-3.el8.x86_64[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:   libdnf-0.63.0-11.1.el8.alma.x86_64[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:   libsolv-0.7.20-4.el8_7.x86_64[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:   python3-dnf-4.7.0-11.el8.alma.noarch[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:   python3-dnf-plugin-versionlock-4.0.21-14.1.el8.noarch[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:   python3-dnf-plugins-core-4.0.21-14.1.el8.noarch[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:   python3-hawkey-0.63.0-11.1.el8.alma.x86_64[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:   python3-libdnf-0.63.0-11.1.el8.alma.x86_64[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:   yum-4.7.0-11.el8.alma.noarch[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:   yum-utils-4.0.21-14.1.el8.noarch[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:31:59+01:00:     azure-arm: Complete![0m
+[0;32m2023-01-16T16:32:02+01:00:     azure-arm: Last metadata expiration check: 0:00:10 ago on Mon 16 Jan 2023 03:31:52 PM UTC.[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: Dependencies resolved.[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm:  Package               Architecture    Version            Repository       Size[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: Installing:[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm:  [1m[32mepel-release         (B[m noarch          8-10.el8           extras           22 k[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: Transaction Summary[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: Install  1 Package[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: Total download size: 22 k[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: Installed size: 32 k[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: Downloading Packages:[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: epel-release-8-10.el8.noarch.rpm                272 kB/s |  22 kB     00:00[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: --------------------------------------------------------------------------------[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: Total                                            38 kB/s |  22 kB     00:00[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: Running transaction check[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: Transaction check succeeded.[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: Running transaction test[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: Transaction test succeeded.[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm: Running transaction[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm:   Preparing        :                                                        1/1[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm:   Installing       : epel-release-8-10.el8.noarch                           1/1[0m
+[0;32m2023-01-16T16:32:03+01:00:     azure-arm:   Running scriptlet: epel-release-8-10.el8.noarch                           1/1[0m
+[0;32m2023-01-16T16:32:04+01:00:     azure-arm:   Verifying        : epel-release-8-10.el8.noarch                           1/1[0m
+[0;32m2023-01-16T16:32:04+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:32:04+01:00:     azure-arm: Installed:[0m
+[0;32m2023-01-16T16:32:04+01:00:     azure-arm:   epel-release-8-10.el8.noarch[0m
+[0;32m2023-01-16T16:32:04+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:32:04+01:00:     azure-arm: Complete![0m
+[0;32m2023-01-16T16:32:06+01:00:     azure-arm: AlmaLinux 8 - PowerTools                        4.9 MB/s | 3.0 MB     00:00[0m
+[0;32m2023-01-16T16:32:08+01:00:     azure-arm: Extra Packages for Enterprise Linux 8 - x86_64  7.4 MB/s |  13 MB     00:01[0m
+[0;32m2023-01-16T16:32:16+01:00:     azure-arm: Extra Packages for Enterprise Linux Modular 8 - 188 kB/s | 733 kB     00:03[0m
+[0;32m2023-01-16T16:32:16+01:00:     azure-arm: Last metadata expiration check: 0:00:01 ago on Mon 16 Jan 2023 03:32:14 PM UTC.[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Package sssd-2.5.2-2.el8_5.1.x86_64 is already installed.[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Package realmd-0.16.3-23.el8.x86_64 is already installed.[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Package oddjob-0.34.7-1.el8.x86_64 is already installed.[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Package oddjob-mkhomedir-0.34.7-1.el8.x86_64 is already installed.[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Package adcli-0.8.2-12.el8.x86_64 is already installed.[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Package samba-common-4.14.5-2.el8.noarch is already installed.[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Package policycoreutils-python-utils-2.9-16.el8.noarch is already installed.[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Dependencies resolved.[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  Package                        Arch     Version              Repository   Size[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Installing:[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mkrb5-workstation              (B[m x86_64   1.18.2-22.el8_7      baseos      956 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mopenldap-clients              (B[m x86_64   2.4.46-18.el8        baseos      201 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msamba-common-tools            (B[m x86_64   4.16.4-2.el8         baseos      535 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Upgrading:[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mjansson                       (B[m x86_64   2.14-1.el8           baseos       46 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mkrb5-libs                     (B[m x86_64   1.18.2-22.el8_7      baseos      839 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mlibipa_hbac                   (B[m x86_64   2.7.3-4.el8_7.3      baseos      122 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mlibldb                        (B[m x86_64   2.5.2-2.el8          baseos      188 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mlibsemanage                   (B[m x86_64   2.9-9.el8_6          baseos      167 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mlibsmbclient                  (B[m x86_64   4.16.4-2.el8         baseos      151 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mlibsss_certmap                (B[m x86_64   2.7.3-4.el8_7.3      baseos      167 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mlibsss_idmap                  (B[m x86_64   2.7.3-4.el8_7.3      baseos      126 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mlibsss_nss_idmap              (B[m x86_64   2.7.3-4.el8_7.3      baseos      134 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mlibtalloc                     (B[m x86_64   2.3.3-2.el8          baseos       49 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mlibtdb                        (B[m x86_64   1.4.6-1.el8          baseos       58 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mlibtevent                     (B[m x86_64   0.12.0-0.el8         baseos       50 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mlibwbclient                   (B[m x86_64   4.16.4-2.el8         baseos      122 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32moddjob                        (B[m x86_64   0.34.7-2.el8         appstream    79 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32moddjob-mkhomedir              (B[m x86_64   0.34.7-2.el8         appstream    49 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mpolicycoreutils               (B[m x86_64   2.9-20.el8           baseos      373 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mpolicycoreutils-python-utils  (B[m noarch   2.9-20.el8           baseos      252 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mpython3-libsemanage           (B[m x86_64   2.9-9.el8_6          baseos      127 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mpython3-policycoreutils       (B[m noarch   2.9-20.el8           baseos      2.2 M[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mpython3-sssdconfig            (B[m noarch   2.7.3-4.el8_7.3      baseos      147 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mrealmd                        (B[m x86_64   0.16.3-25.el8        baseos      238 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msamba-client-libs             (B[m x86_64   4.16.4-2.el8         baseos      5.0 M[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msamba-common                  (B[m noarch   4.16.4-2.el8         baseos      224 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msamba-common-libs             (B[m x86_64   4.16.4-2.el8         baseos      177 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msssd                          (B[m x86_64   2.7.3-4.el8_7.3      baseos      113 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msssd-ad                       (B[m x86_64   2.7.3-4.el8_7.3      baseos      303 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msssd-client                   (B[m x86_64   2.7.3-4.el8_7.3      baseos      231 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msssd-common                   (B[m x86_64   2.7.3-4.el8_7.3      baseos      1.7 M[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msssd-common-pac               (B[m x86_64   2.7.3-4.el8_7.3      baseos      188 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msssd-ipa                      (B[m x86_64   2.7.3-4.el8_7.3      baseos      367 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msssd-kcm                      (B[m x86_64   2.7.3-4.el8_7.3      baseos      256 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msssd-krb5                     (B[m x86_64   2.7.3-4.el8_7.3      baseos      159 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msssd-krb5-common              (B[m x86_64   2.7.3-4.el8_7.3      baseos      196 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msssd-ldap                     (B[m x86_64   2.7.3-4.el8_7.3      baseos      242 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msssd-proxy                    (B[m x86_64   2.7.3-4.el8_7.3      baseos      154 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Installing dependencies:[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mlibkadm5                      (B[m x86_64   1.18.2-22.el8_7      baseos      186 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mpython3-dns                   (B[m noarch   1.15.0-11.el8        baseos      252 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mpython3-ldb                   (B[m x86_64   2.5.2-2.el8          baseos       64 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mpython3-samba                 (B[m x86_64   4.16.4-2.el8         baseos      3.3 M[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mpython3-talloc                (B[m x86_64   2.3.3-2.el8          baseos       28 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mpython3-tdb                   (B[m x86_64   1.4.6-1.el8          baseos       28 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mpython3-tevent                (B[m x86_64   0.12.0-0.el8         baseos       25 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32msamba-libs                    (B[m x86_64   4.16.4-2.el8         baseos      214 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:  [1m[32mtdb-tools                     (B[m x86_64   1.4.6-1.el8          baseos       42 k[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Transaction Summary[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Install  12 Packages[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Upgrade  35 Packages[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Total download size: 21 M[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: Downloading Packages:[0m
+[0;32m2023-01-16T16:32:18+01:00:     azure-arm: (1/47): openldap-clients-2.4.46-18.el8.x86_64.r 1.8 MB/s | 201 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (2/47): libkadm5-1.18.2-22.el8_7.x86_64.rpm     1.5 MB/s | 186 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (3/47): python3-ldb-2.5.2-2.el8.x86_64.rpm      2.5 MB/s |  64 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (4/47): python3-dns-1.15.0-11.el8.noarch.rpm    5.2 MB/s | 252 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (5/47): krb5-workstation-1.18.2-22.el8_7.x86_64 5.0 MB/s | 956 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (6/47): python3-talloc-2.3.3-2.el8.x86_64.rpm   748 kB/s |  28 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (7/47): python3-tdb-1.4.6-1.el8.x86_64.rpm      1.1 MB/s |  28 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (8/47): python3-tevent-0.12.0-0.el8.x86_64.rpm  1.0 MB/s |  25 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (9/47): samba-common-tools-4.16.4-2.el8.x86_64.  12 MB/s | 535 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (10/47): samba-libs-4.16.4-2.el8.x86_64.rpm     3.4 MB/s | 214 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (11/47): tdb-tools-1.4.6-1.el8.x86_64.rpm       1.6 MB/s |  42 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (12/47): python3-samba-4.16.4-2.el8.x86_64.rpm   19 MB/s | 3.3 MB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (13/47): jansson-2.14-1.el8.x86_64.rpm          1.1 MB/s |  46 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (14/47): krb5-libs-1.18.2-22.el8_7.x86_64.rpm    13 MB/s | 839 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (15/47): libipa_hbac-2.7.3-4.el8_7.3.x86_64.rpm 2.3 MB/s | 122 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (16/47): libldb-2.5.2-2.el8.x86_64.rpm          3.3 MB/s | 188 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (17/47): libsemanage-2.9-9.el8_6.x86_64.rpm     3.8 MB/s | 167 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (18/47): libsmbclient-4.16.4-2.el8.x86_64.rpm   3.2 MB/s | 151 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (19/47): libsss_certmap-2.7.3-4.el8_7.3.x86_64. 3.4 MB/s | 167 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (20/47): libsss_idmap-2.7.3-4.el8_7.3.x86_64.rp 4.2 MB/s | 126 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (21/47): libsss_nss_idmap-2.7.3-4.el8_7.3.x86_6 4.8 MB/s | 134 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (22/47): libtalloc-2.3.3-2.el8.x86_64.rpm       2.2 MB/s |  49 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (23/47): libtdb-1.4.6-1.el8.x86_64.rpm          1.6 MB/s |  58 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (24/47): libtevent-0.12.0-0.el8.x86_64.rpm      1.4 MB/s |  50 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (25/47): libwbclient-4.16.4-2.el8.x86_64.rpm    3.3 MB/s | 122 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (26/47): policycoreutils-2.9-20.el8.x86_64.rpm   13 MB/s | 373 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (27/47): policycoreutils-python-utils-2.9-20.el 7.4 MB/s | 252 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (28/47): python3-libsemanage-2.9-9.el8_6.x86_64 3.7 MB/s | 127 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (29/47): python3-sssdconfig-2.7.3-4.el8_7.3.noa 5.7 MB/s | 147 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (30/47): realmd-0.16.3-25.el8.x86_64.rpm        5.1 MB/s | 238 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (31/47): python3-policycoreutils-2.9-20.el8.noa  23 MB/s | 2.2 MB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (32/47): samba-common-4.16.4-2.el8.noarch.rpm   5.6 MB/s | 224 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (33/47): samba-common-libs-4.16.4-2.el8.x86_64. 6.7 MB/s | 177 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (34/47): sssd-2.7.3-4.el8_7.3.x86_64.rpm        4.0 MB/s | 113 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (35/47): sssd-ad-2.7.3-4.el8_7.3.x86_64.rpm      10 MB/s | 303 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (36/47): sssd-client-2.7.3-4.el8_7.3.x86_64.rpm 5.1 MB/s | 231 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (37/47): samba-client-libs-4.16.4-2.el8.x86_64.  27 MB/s | 5.0 MB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (38/47): sssd-common-pac-2.7.3-4.el8_7.3.x86_64 3.3 MB/s | 188 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (39/47): sssd-common-2.7.3-4.el8_7.3.x86_64.rpm  16 MB/s | 1.7 MB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (40/47): sssd-kcm-2.7.3-4.el8_7.3.x86_64.rpm    7.6 MB/s | 256 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (41/47): sssd-ipa-2.7.3-4.el8_7.3.x86_64.rpm    6.3 MB/s | 367 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (42/47): sssd-krb5-2.7.3-4.el8_7.3.x86_64.rpm   4.9 MB/s | 159 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (43/47): sssd-krb5-common-2.7.3-4.el8_7.3.x86_6 3.9 MB/s | 196 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (44/47): sssd-proxy-2.7.3-4.el8_7.3.x86_64.rpm  4.1 MB/s | 154 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (45/47): sssd-ldap-2.7.3-4.el8_7.3.x86_64.rpm   4.2 MB/s | 242 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (46/47): oddjob-0.34.7-2.el8.x86_64.rpm         3.0 MB/s |  79 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: (47/47): oddjob-mkhomedir-0.34.7-2.el8.x86_64.r 1.9 MB/s |  49 kB     00:00[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: --------------------------------------------------------------------------------[0m
+[0;32m2023-01-16T16:32:19+01:00:     azure-arm: Total                                            13 MB/s |  21 MB     00:01[0m
+[0;32m2023-01-16T16:32:20+01:00:     azure-arm: Running transaction check[0m
+[0;32m2023-01-16T16:32:20+01:00:     azure-arm: Transaction check succeeded.[0m
+[0;32m2023-01-16T16:32:20+01:00:     azure-arm: Running transaction test[0m
+[0;32m2023-01-16T16:32:21+01:00:     azure-arm: Transaction test succeeded.[0m
+[0;32m2023-01-16T16:32:21+01:00:     azure-arm: Running transaction[0m
+[0;32m2023-01-16T16:32:21+01:00:     azure-arm:   Preparing        :                                                        1/1[0m
+[0;32m2023-01-16T16:32:21+01:00:     azure-arm:   Running scriptlet: libtalloc-2.3.3-2.el8.x86_64                           1/1[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Upgrading        : libtalloc-2.3.3-2.el8.x86_64                          1/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Upgrading        : libtevent-0.12.0-0.el8.x86_64                         2/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Upgrading        : libtdb-1.4.6-1.el8.x86_64                             3/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Upgrading        : krb5-libs-1.18.2-22.el8_7.x86_64                      4/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Upgrading        : libldb-2.5.2-2.el8.x86_64                             5/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Upgrading        : libsss_idmap-2.7.3-4.el8_7.3.x86_64                   6/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Running scriptlet: libsss_idmap-2.7.3-4.el8_7.3.x86_64                   6/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Upgrading        : libsss_certmap-2.7.3-4.el8_7.3.x86_64                 7/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Running scriptlet: libsss_certmap-2.7.3-4.el8_7.3.x86_64                 7/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Upgrading        : libsemanage-2.9-9.el8_6.x86_64                        8/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Running scriptlet: samba-common-4.16.4-2.el8.noarch                      9/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Upgrading        : samba-common-4.16.4-2.el8.noarch                      9/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Running scriptlet: samba-common-4.16.4-2.el8.noarch                      9/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Installing       : python3-tdb-1.4.6-1.el8.x86_64                       10/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Upgrading        : jansson-2.14-1.el8.x86_64                            11/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Upgrading        : libwbclient-4.16.4-2.el8.x86_64                      12/82[0m
+[0;32m2023-01-16T16:32:22+01:00:     azure-arm:   Upgrading        : samba-common-libs-4.16.4-2.el8.x86_64                13/82[0m
+[0;32m2023-01-16T16:32:23+01:00:     azure-arm:   Upgrading        : samba-client-libs-4.16.4-2.el8.x86_64                14/82[0m
+[0;32m2023-01-16T16:32:23+01:00:     azure-arm:   Installing       : samba-libs-4.16.4-2.el8.x86_64                       15/82[0m
+[0;32m2023-01-16T16:32:23+01:00:     azure-arm:   Upgrading        : libsmbclient-4.16.4-2.el8.x86_64                     16/82[0m
+[0;32m2023-01-16T16:32:23+01:00:     azure-arm:   Installing       : python3-ldb-2.5.2-2.el8.x86_64                       17/82[0m
+[0;32m2023-01-16T16:32:24+01:00:     azure-arm:   Upgrading        : policycoreutils-2.9-20.el8.x86_64                    18/82[0m
+[0;32m2023-01-16T16:32:24+01:00:     azure-arm:   Running scriptlet: policycoreutils-2.9-20.el8.x86_64                    18/82[0m
+[0;32m2023-01-16T16:32:24+01:00:     azure-arm:   Upgrading        : python3-libsemanage-2.9-9.el8_6.x86_64               19/82[0m
+[0;32m2023-01-16T16:32:24+01:00:     azure-arm:   Upgrading        : python3-policycoreutils-2.9-20.el8.noarch            20/82[0m
+[0;32m2023-01-16T16:32:24+01:00:     azure-arm:   Installing       : libkadm5-1.18.2-22.el8_7.x86_64                      21/82[0m
+[0;32m2023-01-16T16:32:24+01:00:     azure-arm:   Installing       : tdb-tools-1.4.6-1.el8.x86_64                         22/82[0m
+[0;32m2023-01-16T16:32:24+01:00:     azure-arm:   Installing       : python3-tevent-0.12.0-0.el8.x86_64                   23/82[0m
+[0;32m2023-01-16T16:32:24+01:00:     azure-arm:   Installing       : python3-talloc-2.3.3-2.el8.x86_64                    24/82[0m
+[0;32m2023-01-16T16:32:24+01:00:     azure-arm:   Upgrading        : oddjob-0.34.7-2.el8.x86_64                           25/82[0m
+[0;32m2023-01-16T16:32:25+01:00:     azure-arm:   Running scriptlet: oddjob-0.34.7-2.el8.x86_64                           25/82[0m
+[0;32m2023-01-16T16:32:25+01:00:     azure-arm:   Upgrading        : python3-sssdconfig-2.7.3-4.el8_7.3.noarch            26/82[0m
+[0;32m2023-01-16T16:32:25+01:00:     azure-arm:   Upgrading        : libsss_nss_idmap-2.7.3-4.el8_7.3.x86_64              27/82[0m
+[0;32m2023-01-16T16:32:25+01:00:     azure-arm:   Running scriptlet: libsss_nss_idmap-2.7.3-4.el8_7.3.x86_64              27/82[0m
+[0;32m2023-01-16T16:32:25+01:00:     azure-arm:   Upgrading        : sssd-client-2.7.3-4.el8_7.3.x86_64                   28/82[0m
+[0;32m2023-01-16T16:32:25+01:00:     azure-arm:   Running scriptlet: sssd-client-2.7.3-4.el8_7.3.x86_64                   28/82[0m
+[0;32m2023-01-16T16:32:25+01:00:     azure-arm:   Running scriptlet: sssd-common-2.7.3-4.el8_7.3.x86_64                   29/82[0m
+[0;32m2023-01-16T16:32:25+01:00:     azure-arm:   Upgrading        : sssd-common-2.7.3-4.el8_7.3.x86_64                   29/82[0m
+[0;32m2023-01-16T16:32:25+01:00:     azure-arm:   Running scriptlet: sssd-common-2.7.3-4.el8_7.3.x86_64                   29/82[0m
+[0;32m2023-01-16T16:32:25+01:00:     azure-arm:   Running scriptlet: sssd-krb5-common-2.7.3-4.el8_7.3.x86_64              30/82[0m
+[0;32m2023-01-16T16:32:25+01:00:     azure-arm:   Upgrading        : sssd-krb5-common-2.7.3-4.el8_7.3.x86_64              30/82[0m
+[0;32m2023-01-16T16:32:25+01:00:     azure-arm:   Upgrading        : sssd-common-pac-2.7.3-4.el8_7.3.x86_64               31/82[0m
+[0;32m2023-01-16T16:32:25+01:00:     azure-arm:   Upgrading        : sssd-ad-2.7.3-4.el8_7.3.x86_64                       32/82[0m
+[0;32m2023-01-16T16:32:26+01:00:     azure-arm:   Upgrading        : sssd-krb5-2.7.3-4.el8_7.3.x86_64                     33/82[0m
+[0;32m2023-01-16T16:32:26+01:00:     azure-arm:   Upgrading        : sssd-ldap-2.7.3-4.el8_7.3.x86_64                     34/82[0m
+[0;32m2023-01-16T16:32:26+01:00:     azure-arm:   Running scriptlet: sssd-proxy-2.7.3-4.el8_7.3.x86_64                    35/82[0m
+[0;32m2023-01-16T16:32:26+01:00:     azure-arm:   Upgrading        : sssd-proxy-2.7.3-4.el8_7.3.x86_64                    35/82[0m
+[0;32m2023-01-16T16:32:26+01:00:     azure-arm:   Upgrading        : libipa_hbac-2.7.3-4.el8_7.3.x86_64                   36/82[0m
+[0;32m2023-01-16T16:32:26+01:00:     azure-arm:   Running scriptlet: libipa_hbac-2.7.3-4.el8_7.3.x86_64                   36/82[0m
+[0;32m2023-01-16T16:32:26+01:00:     azure-arm:   Running scriptlet: sssd-ipa-2.7.3-4.el8_7.3.x86_64                      37/82[0m
+[0;32m2023-01-16T16:32:26+01:00:     azure-arm:   Upgrading        : sssd-ipa-2.7.3-4.el8_7.3.x86_64                      37/82[0m
+[0;32m2023-01-16T16:32:26+01:00:     azure-arm:   Installing       : python3-dns-1.15.0-11.el8.noarch                     38/82[0m
+[0;32m2023-01-16T16:32:27+01:00:     azure-arm:   Installing       : python3-samba-4.16.4-2.el8.x86_64                    39/82[0m
+[0;32m2023-01-16T16:32:27+01:00:     azure-arm:   Installing       : samba-common-tools-4.16.4-2.el8.x86_64               40/82[0m
+[0;32m2023-01-16T16:32:27+01:00:     azure-arm:   Upgrading        : sssd-2.7.3-4.el8_7.3.x86_64                          41/82[0m
+[0;32m2023-01-16T16:32:27+01:00:     azure-arm:   Upgrading        : sssd-kcm-2.7.3-4.el8_7.3.x86_64                      42/82[0m
+[0;32m2023-01-16T16:32:27+01:00:     azure-arm:   Running scriptlet: sssd-kcm-2.7.3-4.el8_7.3.x86_64                      42/82[0m
+[0;32m2023-01-16T16:32:27+01:00:     azure-arm:   Upgrading        : oddjob-mkhomedir-0.34.7-2.el8.x86_64                 43/82[0m
+[0;32m2023-01-16T16:32:27+01:00:     azure-arm:   Running scriptlet: oddjob-mkhomedir-0.34.7-2.el8.x86_64                 43/82[0m
+[0;32m2023-01-16T16:32:28+01:00:     azure-arm:   Installing       : krb5-workstation-1.18.2-22.el8_7.x86_64              44/82[0m
+[0;32m2023-01-16T16:32:28+01:00:     azure-arm:   Upgrading        : policycoreutils-python-utils-2.9-20.el8.noarch       45/82[0m
+[0;32m2023-01-16T16:32:28+01:00:     azure-arm:   Upgrading        : realmd-0.16.3-25.el8.x86_64                          46/82[0m
+[0;32m2023-01-16T16:32:28+01:00:     azure-arm:   Running scriptlet: realmd-0.16.3-25.el8.x86_64                          46/82[0m
+[0;32m2023-01-16T16:32:28+01:00:     azure-arm:   Installing       : openldap-clients-2.4.46-18.el8.x86_64                47/82[0m
+[0;32m2023-01-16T16:32:28+01:00:     azure-arm:   Cleanup          : sssd-2.5.2-2.el8_5.1.x86_64                          48/82[0m
+[0;32m2023-01-16T16:32:28+01:00:     azure-arm:   Cleanup          : policycoreutils-python-utils-2.9-16.el8.noarch       49/82[0m
+[0;32m2023-01-16T16:32:28+01:00:     azure-arm:   Cleanup          : sssd-ipa-2.5.2-2.el8_5.1.x86_64                      50/82[0m
+[0;32m2023-01-16T16:32:28+01:00:     azure-arm:   Cleanup          : sssd-ad-2.5.2-2.el8_5.1.x86_64                       51/82[0m
+[0;32m2023-01-16T16:32:28+01:00:     azure-arm:   Cleanup          : libsmbclient-4.14.5-2.el8.x86_64                     52/82[0m
+[0;32m2023-01-16T16:32:28+01:00:     azure-arm:   Cleanup          : sssd-common-pac-2.5.2-2.el8_5.1.x86_64               53/82[0m
+[0;32m2023-01-16T16:32:28+01:00:     azure-arm:   Cleanup          : samba-client-libs-4.14.5-2.el8.x86_64                54/82[0m
+[0;32m2023-01-16T16:32:28+01:00:     azure-arm:   Cleanup          : samba-common-libs-4.14.5-2.el8.x86_64                55/82[0m
+[0;32m2023-01-16T16:32:28+01:00:     azure-arm:   Running scriptlet: libwbclient-4.14.5-2.el8.x86_64                      56/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Cleanup          : libwbclient-4.14.5-2.el8.x86_64                      56/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Cleanup          : sssd-ldap-2.5.2-2.el8_5.1.x86_64                     57/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Running scriptlet: sssd-kcm-2.5.2-2.el8_5.1.x86_64                      58/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Cleanup          : sssd-kcm-2.5.2-2.el8_5.1.x86_64                      58/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Running scriptlet: sssd-kcm-2.5.2-2.el8_5.1.x86_64                      58/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Cleanup          : sssd-krb5-2.5.2-2.el8_5.1.x86_64                     59/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Cleanup          : sssd-proxy-2.5.2-2.el8_5.1.x86_64                    60/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Cleanup          : sssd-krb5-common-2.5.2-2.el8_5.1.x86_64              61/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Running scriptlet: sssd-common-2.5.2-2.el8_5.1.x86_64                   62/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Cleanup          : sssd-common-2.5.2-2.el8_5.1.x86_64                   62/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Running scriptlet: sssd-common-2.5.2-2.el8_5.1.x86_64                   62/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Running scriptlet: sssd-client-2.5.2-2.el8_5.1.x86_64                   63/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Cleanup          : sssd-client-2.5.2-2.el8_5.1.x86_64                   63/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Running scriptlet: sssd-client-2.5.2-2.el8_5.1.x86_64                   63/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Cleanup          : libldb-2.3.0-2.el8.x86_64                            64/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Cleanup          : libtevent-0.11.0-0.el8.x86_64                        65/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Running scriptlet: realmd-0.16.3-23.el8.x86_64                          66/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Cleanup          : realmd-0.16.3-23.el8.x86_64                          66/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Running scriptlet: realmd-0.16.3-23.el8.x86_64                          66/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Cleanup          : python3-policycoreutils-2.9-16.el8.noarch            67/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Cleanup          : python3-libsemanage-2.9-6.el8.x86_64                 68/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Running scriptlet: policycoreutils-2.9-16.el8.x86_64                    69/82[0m
+[0;32m2023-01-16T16:32:29+01:00:     azure-arm:   Cleanup          : policycoreutils-2.9-16.el8.x86_64                    69/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Cleanup          : libsss_certmap-2.5.2-2.el8_5.1.x86_64                70/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Running scriptlet: libsss_certmap-2.5.2-2.el8_5.1.x86_64                70/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Cleanup          : oddjob-mkhomedir-0.34.7-1.el8.x86_64                 71/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Cleanup          : samba-common-4.14.5-2.el8.noarch                     72/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Cleanup          : python3-sssdconfig-2.5.2-2.el8_5.1.noarch            73/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Running scriptlet: oddjob-0.34.7-1.el8.x86_64                           74/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Cleanup          : oddjob-0.34.7-1.el8.x86_64                           74/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Running scriptlet: oddjob-0.34.7-1.el8.x86_64                           74/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Cleanup          : libtalloc-2.3.2-1.el8.x86_64                         75/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Cleanup          : libsemanage-2.9-6.el8.x86_64                         76/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Cleanup          : krb5-libs-1.18.2-14.el8.x86_64                       77/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Cleanup          : libtdb-1.4.3-1.el8.x86_64                            78/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Running scriptlet: libtdb-1.4.3-1.el8.x86_64                            78/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Cleanup          : libsss_idmap-2.5.2-2.el8_5.1.x86_64                  79/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Running scriptlet: libsss_idmap-2.5.2-2.el8_5.1.x86_64                  79/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Cleanup          : libsss_nss_idmap-2.5.2-2.el8_5.1.x86_64              80/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Running scriptlet: libsss_nss_idmap-2.5.2-2.el8_5.1.x86_64              80/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Cleanup          : jansson-2.11-3.el8.x86_64                            81/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Cleanup          : libipa_hbac-2.5.2-2.el8_5.1.x86_64                   82/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Running scriptlet: libipa_hbac-2.5.2-2.el8_5.1.x86_64                   82/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Running scriptlet: libwbclient-4.16.4-2.el8.x86_64                      82/82[0m
+[0;32m2023-01-16T16:32:30+01:00:     azure-arm:   Running scriptlet: sssd-common-2.7.3-4.el8_7.3.x86_64                   82/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Running scriptlet: libipa_hbac-2.5.2-2.el8_5.1.x86_64                   82/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : krb5-workstation-1.18.2-22.el8_7.x86_64               1/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libkadm5-1.18.2-22.el8_7.x86_64                       2/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : openldap-clients-2.4.46-18.el8.x86_64                 3/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : python3-dns-1.15.0-11.el8.noarch                      4/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : python3-ldb-2.5.2-2.el8.x86_64                        5/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : python3-samba-4.16.4-2.el8.x86_64                     6/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : python3-talloc-2.3.3-2.el8.x86_64                     7/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : python3-tdb-1.4.6-1.el8.x86_64                        8/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : python3-tevent-0.12.0-0.el8.x86_64                    9/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : samba-common-tools-4.16.4-2.el8.x86_64               10/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : samba-libs-4.16.4-2.el8.x86_64                       11/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : tdb-tools-1.4.6-1.el8.x86_64                         12/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : jansson-2.14-1.el8.x86_64                            13/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : jansson-2.11-3.el8.x86_64                            14/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : krb5-libs-1.18.2-22.el8_7.x86_64                     15/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : krb5-libs-1.18.2-14.el8.x86_64                       16/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libipa_hbac-2.7.3-4.el8_7.3.x86_64                   17/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libipa_hbac-2.5.2-2.el8_5.1.x86_64                   18/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libldb-2.5.2-2.el8.x86_64                            19/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libldb-2.3.0-2.el8.x86_64                            20/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libsemanage-2.9-9.el8_6.x86_64                       21/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libsemanage-2.9-6.el8.x86_64                         22/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libsmbclient-4.16.4-2.el8.x86_64                     23/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libsmbclient-4.14.5-2.el8.x86_64                     24/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libsss_certmap-2.7.3-4.el8_7.3.x86_64                25/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libsss_certmap-2.5.2-2.el8_5.1.x86_64                26/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libsss_idmap-2.7.3-4.el8_7.3.x86_64                  27/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libsss_idmap-2.5.2-2.el8_5.1.x86_64                  28/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libsss_nss_idmap-2.7.3-4.el8_7.3.x86_64              29/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libsss_nss_idmap-2.5.2-2.el8_5.1.x86_64              30/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libtalloc-2.3.3-2.el8.x86_64                         31/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libtalloc-2.3.2-1.el8.x86_64                         32/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libtdb-1.4.6-1.el8.x86_64                            33/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libtdb-1.4.3-1.el8.x86_64                            34/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libtevent-0.12.0-0.el8.x86_64                        35/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libtevent-0.11.0-0.el8.x86_64                        36/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libwbclient-4.16.4-2.el8.x86_64                      37/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : libwbclient-4.14.5-2.el8.x86_64                      38/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : policycoreutils-2.9-20.el8.x86_64                    39/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : policycoreutils-2.9-16.el8.x86_64                    40/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : policycoreutils-python-utils-2.9-20.el8.noarch       41/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : policycoreutils-python-utils-2.9-16.el8.noarch       42/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : python3-libsemanage-2.9-9.el8_6.x86_64               43/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : python3-libsemanage-2.9-6.el8.x86_64                 44/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : python3-policycoreutils-2.9-20.el8.noarch            45/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : python3-policycoreutils-2.9-16.el8.noarch            46/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : python3-sssdconfig-2.7.3-4.el8_7.3.noarch            47/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : python3-sssdconfig-2.5.2-2.el8_5.1.noarch            48/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : realmd-0.16.3-25.el8.x86_64                          49/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : realmd-0.16.3-23.el8.x86_64                          50/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : samba-client-libs-4.16.4-2.el8.x86_64                51/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : samba-client-libs-4.14.5-2.el8.x86_64                52/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : samba-common-4.16.4-2.el8.noarch                     53/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : samba-common-4.14.5-2.el8.noarch                     54/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : samba-common-libs-4.16.4-2.el8.x86_64                55/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : samba-common-libs-4.14.5-2.el8.x86_64                56/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-2.7.3-4.el8_7.3.x86_64                          57/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-2.5.2-2.el8_5.1.x86_64                          58/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-ad-2.7.3-4.el8_7.3.x86_64                       59/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-ad-2.5.2-2.el8_5.1.x86_64                       60/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-client-2.7.3-4.el8_7.3.x86_64                   61/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-client-2.5.2-2.el8_5.1.x86_64                   62/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-common-2.7.3-4.el8_7.3.x86_64                   63/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-common-2.5.2-2.el8_5.1.x86_64                   64/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-common-pac-2.7.3-4.el8_7.3.x86_64               65/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-common-pac-2.5.2-2.el8_5.1.x86_64               66/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-ipa-2.7.3-4.el8_7.3.x86_64                      67/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-ipa-2.5.2-2.el8_5.1.x86_64                      68/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-kcm-2.7.3-4.el8_7.3.x86_64                      69/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-kcm-2.5.2-2.el8_5.1.x86_64                      70/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-krb5-2.7.3-4.el8_7.3.x86_64                     71/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-krb5-2.5.2-2.el8_5.1.x86_64                     72/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-krb5-common-2.7.3-4.el8_7.3.x86_64              73/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-krb5-common-2.5.2-2.el8_5.1.x86_64              74/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-ldap-2.7.3-4.el8_7.3.x86_64                     75/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-ldap-2.5.2-2.el8_5.1.x86_64                     76/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-proxy-2.7.3-4.el8_7.3.x86_64                    77/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : sssd-proxy-2.5.2-2.el8_5.1.x86_64                    78/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : oddjob-0.34.7-2.el8.x86_64                           79/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : oddjob-0.34.7-1.el8.x86_64                           80/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : oddjob-mkhomedir-0.34.7-2.el8.x86_64                 81/82[0m
+[0;32m2023-01-16T16:32:31+01:00:     azure-arm:   Verifying        : oddjob-mkhomedir-0.34.7-1.el8.x86_64                 82/82[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm: Upgraded:[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   jansson-2.14-1.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   krb5-libs-1.18.2-22.el8_7.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   libipa_hbac-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   libldb-2.5.2-2.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   libsemanage-2.9-9.el8_6.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   libsmbclient-4.16.4-2.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   libsss_certmap-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   libsss_idmap-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   libsss_nss_idmap-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   libtalloc-2.3.3-2.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   libtdb-1.4.6-1.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   libtevent-0.12.0-0.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   libwbclient-4.16.4-2.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   oddjob-0.34.7-2.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   oddjob-mkhomedir-0.34.7-2.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   policycoreutils-2.9-20.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   policycoreutils-python-utils-2.9-20.el8.noarch[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   python3-libsemanage-2.9-9.el8_6.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   python3-policycoreutils-2.9-20.el8.noarch[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   python3-sssdconfig-2.7.3-4.el8_7.3.noarch[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   realmd-0.16.3-25.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   samba-client-libs-4.16.4-2.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   samba-common-4.16.4-2.el8.noarch[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   samba-common-libs-4.16.4-2.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   sssd-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   sssd-ad-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   sssd-client-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   sssd-common-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   sssd-common-pac-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   sssd-ipa-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   sssd-kcm-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   sssd-krb5-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   sssd-krb5-common-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   sssd-ldap-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   sssd-proxy-2.7.3-4.el8_7.3.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm: Installed:[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   krb5-workstation-1.18.2-22.el8_7.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   libkadm5-1.18.2-22.el8_7.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   openldap-clients-2.4.46-18.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   python3-dns-1.15.0-11.el8.noarch[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   python3-ldb-2.5.2-2.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   python3-samba-4.16.4-2.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   python3-talloc-2.3.3-2.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   python3-tdb-1.4.6-1.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   python3-tevent-0.12.0-0.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   samba-common-tools-4.16.4-2.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   samba-libs-4.16.4-2.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:   tdb-tools-1.4.6-1.el8.x86_64[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm: Complete![0m
+[0;32m2023-01-16T16:32:32+01:00:     azure-arm: Last metadata expiration check: 0:00:18 ago on Mon 16 Jan 2023 03:32:14 PM UTC.[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm: Package epel-release-8-10.el8.noarch is already installed.[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm: Package ca-certificates-2021.2.50-80.0.el8_4.noarch is already installed.[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm: Dependencies resolved.[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  Package                Arch      Version                    Repository    Size[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm: Installing:[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mnfs-utils             (B[m x86_64    1:2.3.3-57.el8             baseos       514 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mopenssl-devel         (B[m x86_64    1:1.1.1k-7.el8_6           baseos       2.3 M[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm: Upgrading:[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mca-certificates       (B[m noarch    2022.2.54-80.2.el8_6       baseos       920 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32me2fsprogs             (B[m x86_64    1.45.6-5.el8               baseos       1.0 M[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32me2fsprogs-libs        (B[m x86_64    1.45.6-5.el8               baseos       232 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mepel-release          (B[m noarch    8-18.el8                   epel          24 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mlibcom_err            (B[m x86_64    1.45.6-5.el8               baseos        48 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mlibselinux            (B[m x86_64    2.9-6.el8                  baseos       164 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mlibselinux-utils      (B[m x86_64    2.9-6.el8                  baseos       242 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mlibss                 (B[m x86_64    1.45.6-5.el8               baseos        53 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mlibverto              (B[m x86_64    0.3.2-2.el8                baseos        23 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mopenssl               (B[m x86_64    1:1.1.1k-7.el8_6           baseos       708 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mopenssl-libs          (B[m x86_64    1:1.1.1k-7.el8_6           baseos       1.5 M[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mpcre2                 (B[m x86_64    10.32-3.el8_6              baseos       246 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mpython3-libselinux    (B[m x86_64    2.9-6.el8                  baseos       282 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm: Installing dependencies:[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mgssproxy              (B[m x86_64    0.8.0-21.el8               baseos       118 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mkeyutils              (B[m x86_64    1.5.10-9.el8               baseos        65 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mkeyutils-libs-devel   (B[m x86_64    1.5.10-9.el8               baseos        47 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mkrb5-devel            (B[m x86_64    1.18.2-22.el8_7            baseos       559 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mlibcom_err-devel      (B[m x86_64    1.45.6-5.el8               baseos        38 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mlibev                 (B[m x86_64    4.24-6.el8                 appstream     52 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mlibselinux-devel      (B[m x86_64    2.9-6.el8                  baseos       199 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mlibsepol-devel        (B[m x86_64    2.9-3.el8                  baseos        86 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mlibverto-devel        (B[m x86_64    0.3.2-2.el8                baseos        17 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mlibverto-libev        (B[m x86_64    0.3.2-2.el8                appstream     15 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mpcre2-devel           (B[m x86_64    10.32-3.el8_6              baseos       604 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mpcre2-utf16           (B[m x86_64    10.32-3.el8_6              baseos       228 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mpcre2-utf32           (B[m x86_64    10.32-3.el8_6              baseos       219 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:  [1m[32mrpcbind               (B[m x86_64    1.2.5-10.el8               baseos        69 k[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm: Transaction Summary[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm: Install  16 Packages[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm: Upgrade  13 Packages[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm: Total download size: 10 M[0m
+[0;32m2023-01-16T16:32:33+01:00:     azure-arm: Downloading Packages:[0m
+[0;32m2023-01-16T16:32:34+01:00:     azure-arm: (1/29): keyutils-libs-devel-1.5.10-9.el8.x86_64 432 kB/s |  47 kB     00:00[0m
+[0;32m2023-01-16T16:32:34+01:00:     azure-arm: (2/29): keyutils-1.5.10-9.el8.x86_64.rpm        547 kB/s |  65 kB     00:00[0m
+[0;32m2023-01-16T16:32:34+01:00:     azure-arm: (3/29): gssproxy-0.8.0-21.el8.x86_64.rpm        934 kB/s | 118 kB     00:00[0m
+[0;32m2023-01-16T16:32:34+01:00:     azure-arm: (4/29): libcom_err-devel-1.45.6-5.el8.x86_64.rp 1.7 MB/s |  38 kB     00:00[0m
+[0;32m2023-01-16T16:32:34+01:00:     azure-arm: (5/29): libsepol-devel-2.9-3.el8.x86_64.rpm     1.7 MB/s |  86 kB     00:00[0m
+[0;32m2023-01-16T16:32:34+01:00:     azure-arm: (6/29): libselinux-devel-2.9-6.el8.x86_64.rpm   2.6 MB/s | 199 kB     00:00[0m
+[0;32m2023-01-16T16:32:34+01:00:     azure-arm: (7/29): krb5-devel-1.18.2-22.el8_7.x86_64.rpm   5.4 MB/s | 559 kB     00:00[0m
+[0;32m2023-01-16T16:32:34+01:00:     azure-arm: (8/29): libverto-devel-0.3.2-2.el8.x86_64.rpm   708 kB/s |  17 kB     00:00[0m
+[0;32m2023-01-16T16:32:34+01:00:     azure-arm: (9/29): nfs-utils-2.3.3-57.el8.x86_64.rpm        12 MB/s | 514 kB     00:00[0m
+[0;32m2023-01-16T16:32:34+01:00:     azure-arm: (10/29): openssl-devel-1.1.1k-7.el8_6.x86_64.rp  32 MB/s | 2.3 MB     00:00[0m
+[0;32m2023-01-16T16:32:34+01:00:     azure-arm: (11/29): pcre2-devel-10.32-3.el8_6.x86_64.rpm   7.3 MB/s | 604 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (12/29): pcre2-utf16-10.32-3.el8_6.x86_64.rpm   2.0 MB/s | 228 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (13/29): rpcbind-1.2.5-10.el8.x86_64.rpm        1.0 MB/s |  69 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (14/29): pcre2-utf32-10.32-3.el8_6.x86_64.rpm   2.4 MB/s | 219 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (15/29): libev-4.24-6.el8.x86_64.rpm            2.4 MB/s |  52 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (16/29): libverto-libev-0.3.2-2.el8.x86_64.rpm  742 kB/s |  15 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (17/29): ca-certificates-2022.2.54-80.2.el8_6.n  26 MB/s | 920 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (18/29): e2fsprogs-libs-1.45.6-5.el8.x86_64.rpm 7.7 MB/s | 232 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (19/29): libcom_err-1.45.6-5.el8.x86_64.rpm     1.3 MB/s |  48 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (20/29): libselinux-2.9-6.el8.x86_64.rpm        4.4 MB/s | 164 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (21/29): e2fsprogs-1.45.6-5.el8.x86_64.rpm       11 MB/s | 1.0 MB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (22/29): libss-1.45.6-5.el8.x86_64.rpm          1.9 MB/s |  53 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (23/29): libselinux-utils-2.9-6.el8.x86_64.rpm  5.1 MB/s | 242 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (24/29): libverto-0.3.2-2.el8.x86_64.rpm        777 kB/s |  23 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (25/29): openssl-1.1.1k-7.el8_6.x86_64.rpm       20 MB/s | 708 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (26/29): pcre2-10.32-3.el8_6.x86_64.rpm         9.0 MB/s | 246 kB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (27/29): openssl-libs-1.1.1k-7.el8_6.x86_64.rpm  21 MB/s | 1.5 MB     00:00[0m
+[0;32m2023-01-16T16:32:35+01:00:     azure-arm: (28/29): python3-libselinux-2.9-6.el8.x86_64.rp 4.9 MB/s | 282 kB     00:00[0m
+[0;32m2023-01-16T16:33:05+01:00:     azure-arm: [MIRROR] epel-release-8-18.el8.noarch.rpm: Curl error (28): Timeout was reached for http://mirror.es.its.nyu.edu/epel/8/Everything/x86_64/Packages/e/epel-release-8-18.el8.noarch.rpm [Connection timed out after 30000 milliseconds][0m
+[0;32m2023-01-16T16:33:05+01:00:     azure-arm: (29/29): epel-release-8-18.el8.noarch.rpm       819  B/s |  24 kB     00:30[0m
+[0;32m2023-01-16T16:33:05+01:00:     azure-arm: --------------------------------------------------------------------------------[0m
+[0;32m2023-01-16T16:33:05+01:00:     azure-arm: Total                                           330 kB/s |  10 MB     00:32[0m
+[0;32m2023-01-16T16:33:06+01:00:     azure-arm: Extra Packages for Enterprise Linux 8 - x86_64  1.6 MB/s | 1.6 kB     00:00[0m
+[0;32m2023-01-16T16:33:06+01:00:     azure-arm: Importing GPG key 0x2F86D6A1:[0m
+[0;32m2023-01-16T16:33:06+01:00:     azure-arm:  Userid     : "Fedora EPEL (8) <epel@fedoraproject.org>"[0m
+[0;32m2023-01-16T16:33:06+01:00:     azure-arm:  Fingerprint: 94E2 79EB 8D8F 25B2 1810 ADF1 21EA 45AB 2F86 D6A1[0m
+[0;32m2023-01-16T16:33:06+01:00:     azure-arm:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8[0m
+[0;32m2023-01-16T16:33:06+01:00:     azure-arm: Key imported successfully[0m
+[0;32m2023-01-16T16:33:06+01:00:     azure-arm: Running transaction check[0m
+[0;32m2023-01-16T16:33:06+01:00:     azure-arm: Transaction check succeeded.[0m
+[0;32m2023-01-16T16:33:06+01:00:     azure-arm: Running transaction test[0m
+[0;32m2023-01-16T16:33:06+01:00:     azure-arm: Transaction test succeeded.[0m
+[0;32m2023-01-16T16:33:06+01:00:     azure-arm: Running transaction[0m
+[0;32m2023-01-16T16:33:07+01:00:     azure-arm:   Preparing        :                                                        1/1[0m
+[0;32m2023-01-16T16:33:07+01:00:     azure-arm:   Running scriptlet: libcom_err-1.45.6-5.el8.x86_64                         1/1[0m
+[0;32m2023-01-16T16:33:07+01:00:     azure-arm:   Upgrading        : libcom_err-1.45.6-5.el8.x86_64                        1/42[0m
+[0;32m2023-01-16T16:33:07+01:00:     azure-arm:   Running scriptlet: libcom_err-1.45.6-5.el8.x86_64                        1/42[0m
+[0;32m2023-01-16T16:33:07+01:00:     azure-arm:   Upgrading        : pcre2-10.32-3.el8_6.x86_64                            2/42[0m
+[0;32m2023-01-16T16:33:07+01:00:     azure-arm:   Upgrading        : libselinux-2.9-6.el8.x86_64                           3/42[0m
+[0;32m2023-01-16T16:33:07+01:00:     azure-arm:   Running scriptlet: libselinux-2.9-6.el8.x86_64                           3/42[0m
+[0;32m2023-01-16T16:33:07+01:00:     azure-arm:   Upgrading        : libverto-0.3.2-2.el8.x86_64                           4/42[0m
+[0;32m2023-01-16T16:33:07+01:00:     azure-arm:   Installing       : libverto-devel-0.3.2-2.el8.x86_64                     5/42[0m
+[0;32m2023-01-16T16:33:07+01:00:     azure-arm:   Installing       : libcom_err-devel-1.45.6-5.el8.x86_64                  6/42[0m
+[0;32m2023-01-16T16:33:07+01:00:     azure-arm:   Upgrading        : e2fsprogs-libs-1.45.6-5.el8.x86_64                    7/42[0m
+[0;32m2023-01-16T16:33:07+01:00:     azure-arm:   Running scriptlet: e2fsprogs-libs-1.45.6-5.el8.x86_64                    7/42[0m
+[0;32m2023-01-16T16:33:07+01:00:     azure-arm:   Upgrading        : libss-1.45.6-5.el8.x86_64                             8/42[0m
+[0;32m2023-01-16T16:33:08+01:00:     azure-arm:   Running scriptlet: libss-1.45.6-5.el8.x86_64                             8/42[0m
+[0;32m2023-01-16T16:33:08+01:00:     azure-arm:   Running scriptlet: ca-certificates-2022.2.54-80.2.el8_6.noarch           9/42[0m
+[0;32m2023-01-16T16:33:08+01:00:     azure-arm:   Upgrading        : ca-certificates-2022.2.54-80.2.el8_6.noarch           9/42[0m
+[0;32m2023-01-16T16:33:08+01:00:     azure-arm:   Running scriptlet: ca-certificates-2022.2.54-80.2.el8_6.noarch           9/42[0m
+[0;32m2023-01-16T16:33:09+01:00:     azure-arm:   Upgrading        : openssl-libs-1:1.1.1k-7.el8_6.x86_64                 10/42[0m
+[0;32m2023-01-16T16:33:09+01:00:     azure-arm:   Running scriptlet: openssl-libs-1:1.1.1k-7.el8_6.x86_64                 10/42[0m
+[0;32m2023-01-16T16:33:09+01:00:     azure-arm:   Installing       : libev-4.24-6.el8.x86_64                              11/42[0m
+[0;32m2023-01-16T16:33:09+01:00:     azure-arm:   Installing       : libverto-libev-0.3.2-2.el8.x86_64                    12/42[0m
+[0;32m2023-01-16T16:33:09+01:00:     azure-arm:   Installing       : gssproxy-0.8.0-21.el8.x86_64                         13/42[0m
+[0;32m2023-01-16T16:33:09+01:00:     azure-arm:   Running scriptlet: gssproxy-0.8.0-21.el8.x86_64                         13/42[0m
+[0;32m2023-01-16T16:33:09+01:00:     azure-arm:   Running scriptlet: rpcbind-1.2.5-10.el8.x86_64                          14/42[0m
+[0;32m2023-01-16T16:33:10+01:00:     azure-arm:   Installing       : rpcbind-1.2.5-10.el8.x86_64                          14/42[0m
+[0;32m2023-01-16T16:33:10+01:00:     azure-arm:   Running scriptlet: rpcbind-1.2.5-10.el8.x86_64                          14/42[0m
+[0;32m2023-01-16T16:33:10+01:00:     azure-arm:   Installing       : pcre2-utf32-10.32-3.el8_6.x86_64                     15/42[0m
+[0;32m2023-01-16T16:33:11+01:00:     azure-arm:   Installing       : pcre2-utf16-10.32-3.el8_6.x86_64                     16/42[0m
+[0;32m2023-01-16T16:33:11+01:00:     azure-arm:   Installing       : pcre2-devel-10.32-3.el8_6.x86_64                     17/42[0m
+[0;32m2023-01-16T16:33:11+01:00:     azure-arm:   Installing       : libsepol-devel-2.9-3.el8.x86_64                      18/42[0m
+[0;32m2023-01-16T16:33:11+01:00:     azure-arm:   Installing       : libselinux-devel-2.9-6.el8.x86_64                    19/42[0m
+[0;32m2023-01-16T16:33:11+01:00:     azure-arm:   Installing       : keyutils-libs-devel-1.5.10-9.el8.x86_64              20/42[0m
+[0;32m2023-01-16T16:33:11+01:00:     azure-arm:   Installing       : krb5-devel-1.18.2-22.el8_7.x86_64                    21/42[0m
+[0;32m2023-01-16T16:33:11+01:00:     azure-arm:   Installing       : keyutils-1.5.10-9.el8.x86_64                         22/42[0m
+[0;32m2023-01-16T16:33:11+01:00:     azure-arm:   Running scriptlet: nfs-utils-1:2.3.3-57.el8.x86_64                      23/42[0m
+[0;32m2023-01-16T16:33:12+01:00:     azure-arm:   Installing       : nfs-utils-1:2.3.3-57.el8.x86_64                      23/42[0m
+[0;32m2023-01-16T16:33:13+01:00:     azure-arm:   Running scriptlet: nfs-utils-1:2.3.3-57.el8.x86_64                      23/42[0m
+[0;32m2023-01-16T16:33:14+01:00:     azure-arm:   Installing       : openssl-devel-1:1.1.1k-7.el8_6.x86_64                24/42[0m
+[0;32m2023-01-16T16:33:15+01:00:     azure-arm:   Upgrading        : openssl-1:1.1.1k-7.el8_6.x86_64                      25/42[0m
+[0;32m2023-01-16T16:33:15+01:00:     azure-arm:   Upgrading        : e2fsprogs-1.45.6-5.el8.x86_64                        26/42[0m
+[0;32m2023-01-16T16:33:15+01:00:     azure-arm:   Upgrading        : libselinux-utils-2.9-6.el8.x86_64                    27/42[0m
+[0;32m2023-01-16T16:33:15+01:00:     azure-arm:   Upgrading        : python3-libselinux-2.9-6.el8.x86_64                  28/42[0m
+[0;32m2023-01-16T16:33:15+01:00:     azure-arm:   Upgrading        : epel-release-8-18.el8.noarch                         29/42[0m
+[0;32m2023-01-16T16:33:15+01:00:     azure-arm:   Running scriptlet: epel-release-8-18.el8.noarch                         29/42[0m
+[0;32m2023-01-16T16:33:15+01:00:     azure-arm:   Cleanup          : openssl-1:1.1.1k-4.el8.x86_64                        30/42[0m
+[0;32m2023-01-16T16:33:15+01:00:     azure-arm:   Cleanup          : e2fsprogs-1.45.6-2.el8.x86_64                        31/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Cleanup          : libselinux-utils-2.9-5.el8.x86_64                    32/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Cleanup          : e2fsprogs-libs-1.45.6-2.el8.x86_64                   33/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Running scriptlet: e2fsprogs-libs-1.45.6-2.el8.x86_64                   33/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Cleanup          : libss-1.45.6-2.el8.x86_64                            34/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Running scriptlet: libss-1.45.6-2.el8.x86_64                            34/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Cleanup          : python3-libselinux-2.9-5.el8.x86_64                  35/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Cleanup          : epel-release-8-10.el8.noarch                         36/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Cleanup          : libselinux-2.9-5.el8.x86_64                          37/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Cleanup          : openssl-libs-1:1.1.1k-4.el8.x86_64                   38/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Running scriptlet: openssl-libs-1:1.1.1k-4.el8.x86_64                   38/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Cleanup          : ca-certificates-2021.2.50-80.0.el8_4.noarch          39/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Cleanup          : pcre2-10.32-2.el8.x86_64                             40/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Cleanup          : libcom_err-1.45.6-2.el8.x86_64                       41/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Running scriptlet: libcom_err-1.45.6-2.el8.x86_64                       41/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Cleanup          : libverto-0.3.0-5.el8.x86_64                          42/42[0m
+[0;32m2023-01-16T16:33:16+01:00:     azure-arm:   Running scriptlet: ca-certificates-2022.2.54-80.2.el8_6.noarch          42/42[0m
+[0;32m2023-01-16T16:33:17+01:00:     azure-arm:   Running scriptlet: libverto-0.3.0-5.el8.x86_64                          42/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : gssproxy-0.8.0-21.el8.x86_64                          1/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : keyutils-1.5.10-9.el8.x86_64                          2/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : keyutils-libs-devel-1.5.10-9.el8.x86_64               3/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : krb5-devel-1.18.2-22.el8_7.x86_64                     4/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libcom_err-devel-1.45.6-5.el8.x86_64                  5/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libselinux-devel-2.9-6.el8.x86_64                     6/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libsepol-devel-2.9-3.el8.x86_64                       7/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libverto-devel-0.3.2-2.el8.x86_64                     8/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : nfs-utils-1:2.3.3-57.el8.x86_64                       9/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : openssl-devel-1:1.1.1k-7.el8_6.x86_64                10/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : pcre2-devel-10.32-3.el8_6.x86_64                     11/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : pcre2-utf16-10.32-3.el8_6.x86_64                     12/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : pcre2-utf32-10.32-3.el8_6.x86_64                     13/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : rpcbind-1.2.5-10.el8.x86_64                          14/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libev-4.24-6.el8.x86_64                              15/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libverto-libev-0.3.2-2.el8.x86_64                    16/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : ca-certificates-2022.2.54-80.2.el8_6.noarch          17/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : ca-certificates-2021.2.50-80.0.el8_4.noarch          18/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : e2fsprogs-1.45.6-5.el8.x86_64                        19/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : e2fsprogs-1.45.6-2.el8.x86_64                        20/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : e2fsprogs-libs-1.45.6-5.el8.x86_64                   21/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : e2fsprogs-libs-1.45.6-2.el8.x86_64                   22/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libcom_err-1.45.6-5.el8.x86_64                       23/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libcom_err-1.45.6-2.el8.x86_64                       24/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libselinux-2.9-6.el8.x86_64                          25/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libselinux-2.9-5.el8.x86_64                          26/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libselinux-utils-2.9-6.el8.x86_64                    27/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libselinux-utils-2.9-5.el8.x86_64                    28/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libss-1.45.6-5.el8.x86_64                            29/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libss-1.45.6-2.el8.x86_64                            30/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libverto-0.3.2-2.el8.x86_64                          31/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : libverto-0.3.0-5.el8.x86_64                          32/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : openssl-1:1.1.1k-7.el8_6.x86_64                      33/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : openssl-1:1.1.1k-4.el8.x86_64                        34/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : openssl-libs-1:1.1.1k-7.el8_6.x86_64                 35/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : openssl-libs-1:1.1.1k-4.el8.x86_64                   36/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : pcre2-10.32-3.el8_6.x86_64                           37/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : pcre2-10.32-2.el8.x86_64                             38/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : python3-libselinux-2.9-6.el8.x86_64                  39/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : python3-libselinux-2.9-5.el8.x86_64                  40/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : epel-release-8-18.el8.noarch                         41/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   Verifying        : epel-release-8-10.el8.noarch                         42/42[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm: Upgraded:[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   ca-certificates-2022.2.54-80.2.el8_6.noarch  e2fsprogs-1.45.6-5.el8.x86_64[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   e2fsprogs-libs-1.45.6-5.el8.x86_64           epel-release-8-18.el8.noarch[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   libcom_err-1.45.6-5.el8.x86_64               libselinux-2.9-6.el8.x86_64[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   libselinux-utils-2.9-6.el8.x86_64            libss-1.45.6-5.el8.x86_64[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   libverto-0.3.2-2.el8.x86_64                  openssl-1:1.1.1k-7.el8_6.x86_64[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   openssl-libs-1:1.1.1k-7.el8_6.x86_64         pcre2-10.32-3.el8_6.x86_64[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   python3-libselinux-2.9-6.el8.x86_64[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm: Installed:[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   gssproxy-0.8.0-21.el8.x86_64            keyutils-1.5.10-9.el8.x86_64[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   keyutils-libs-devel-1.5.10-9.el8.x86_64 krb5-devel-1.18.2-22.el8_7.x86_64[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   libcom_err-devel-1.45.6-5.el8.x86_64    libev-4.24-6.el8.x86_64[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   libselinux-devel-2.9-6.el8.x86_64       libsepol-devel-2.9-3.el8.x86_64[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   libverto-devel-0.3.2-2.el8.x86_64       libverto-libev-0.3.2-2.el8.x86_64[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   nfs-utils-1:2.3.3-57.el8.x86_64         openssl-devel-1:1.1.1k-7.el8_6.x86_64[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   pcre2-devel-10.32-3.el8_6.x86_64        pcre2-utf16-10.32-3.el8_6.x86_64[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:   pcre2-utf32-10.32-3.el8_6.x86_64        rpcbind-1.2.5-10.el8.x86_64[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:33:18+01:00:     azure-arm: Complete![0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Last metadata expiration check: 0:01:11 ago on Mon 16 Jan 2023 03:32:08 PM UTC.[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Package patch-2.7.6-11.el8.x86_64 is already installed.[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Package gcc-8.5.0-4.el8_5.alma.x86_64 is already installed.[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Package perl-Data-Dumper-2.167-399.el8.x86_64 is already installed.[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Package perl-Thread-Queue-3.13-1.el8.noarch is already installed.[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Package numactl-2.0.12-13.el8.x86_64 is already installed.[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Package jq-1.5-12.el8.x86_64 is already installed.[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Package python36-3.6.8-38.module_el8.5.0+2569+5c5719bc.x86_64 is already installed.[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Dependencies resolved.[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  Package               Arch       Version                  Repository      Size[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Installing:[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mLmod                 (B[m x86_64     8.7.7-1.el8              epel           261 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mgcc-c++              (B[m x86_64     8.5.0-16.el8_7.alma      appstream       12 M[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mhtop                 (B[m x86_64     3.2.1-1.el8              epel           170 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mhwloc                (B[m x86_64     2.2.0-3.el8              baseos         173 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlibXt                (B[m x86_64     1.1.5-12.el8             appstream      185 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Upgrading:[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mcpp                  (B[m x86_64     8.5.0-16.el8_7.alma      appstream       10 M[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mgcc                  (B[m x86_64     8.5.0-16.el8_7.alma      appstream       23 M[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mgcc-gfortran         (B[m x86_64     8.5.0-16.el8_7.alma      appstream       12 M[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mjq                   (B[m x86_64     1.6-3.el8                appstream      201 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlibgcc               (B[m x86_64     8.5.0-16.el8_7.alma      baseos          80 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlibgfortran          (B[m x86_64     8.5.0-16.el8_7.alma      baseos         643 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlibgomp              (B[m x86_64     8.5.0-16.el8_7.alma      baseos         206 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlibquadmath          (B[m x86_64     8.5.0-16.el8_7.alma      baseos         171 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlibquadmath-devel    (B[m x86_64     8.5.0-16.el8_7.alma      appstream       24 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlibstdc++            (B[m x86_64     8.5.0-16.el8_7.alma      baseos         453 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Installing dependencies:[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mhwloc-libs           (B[m x86_64     2.2.0-3.el8              baseos         2.0 M[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlibICE               (B[m x86_64     1.0.9-15.el8             appstream       73 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlibSM                (B[m x86_64     1.2.3-1.el8              appstream       47 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlibstdc++-devel      (B[m x86_64     8.5.0-16.el8_7.alma      appstream      2.0 M[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlua                  (B[m x86_64     5.3.4-12.el8             appstream      191 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlua-filesystem       (B[m x86_64     1.6.3-7.el8              powertools      35 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlua-json             (B[m noarch     1.3.2-9.el8              appstream       28 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlua-lpeg             (B[m x86_64     1.0.1-6.el8              appstream       67 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlua-posix            (B[m x86_64     33.3.1-9.el8             powertools     176 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:  [1m[32mlua-term             (B[m x86_64     0.07-9.el8               epel            16 k[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Transaction Summary[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Install  15 Packages[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Upgrade  10 Packages[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Total download size: 65 M[0m
+[0;32m2023-01-16T16:33:19+01:00:     azure-arm: Downloading Packages:[0m
+[0;32m2023-01-16T16:33:21+01:00:     azure-arm: (1/25): hwloc-2.2.0-3.el8.x86_64.rpm            1.8 MB/s | 173 kB     00:00[0m
+[0;32m2023-01-16T16:33:21+01:00:     azure-arm: (2/25): libICE-1.0.9-15.el8.x86_64.rpm          3.5 MB/s |  73 kB     00:00[0m
+[0;32m2023-01-16T16:33:21+01:00:     azure-arm: (3/25): libSM-1.2.3-1.el8.x86_64.rpm            2.1 MB/s |  47 kB     00:00[0m
+[0;32m2023-01-16T16:33:21+01:00:     azure-arm: (4/25): hwloc-libs-2.2.0-3.el8.x86_64.rpm        12 MB/s | 2.0 MB     00:00[0m
+[0;32m2023-01-16T16:33:21+01:00:     azure-arm: (5/25): libXt-1.1.5-12.el8.x86_64.rpm           4.5 MB/s | 185 kB     00:00[0m
+[0;32m2023-01-16T16:33:21+01:00:     azure-arm: (6/25): lua-5.3.4-12.el8.x86_64.rpm             7.5 MB/s | 191 kB     00:00[0m
+[0;32m2023-01-16T16:33:21+01:00:     azure-arm: (7/25): libstdc++-devel-8.5.0-16.el8_7.alma.x86  36 MB/s | 2.0 MB     00:00[0m
+[0;32m2023-01-16T16:33:21+01:00:     azure-arm: (8/25): lua-json-1.3.2-9.el8.noarch.rpm         938 kB/s |  28 kB     00:00[0m
+[0;32m2023-01-16T16:33:21+01:00:     azure-arm: (9/25): lua-lpeg-1.0.1-6.el8.x86_64.rpm         3.0 MB/s |  67 kB     00:00[0m
+[0;32m2023-01-16T16:33:21+01:00:     azure-arm: (10/25): lua-filesystem-1.6.3-7.el8.x86_64.rpm  1.7 MB/s |  35 kB     00:00[0m
+[0;32m2023-01-16T16:33:21+01:00:     azure-arm: (11/25): lua-posix-33.3.1-9.el8.x86_64.rpm      7.5 MB/s | 176 kB     00:00[0m
+[0;32m2023-01-16T16:33:21+01:00:     azure-arm: (12/25): gcc-c++-8.5.0-16.el8_7.alma.x86_64.rpm  32 MB/s |  12 MB     00:00[0m
+[0;32m2023-01-16T16:33:21+01:00:     azure-arm: (13/25): lua-term-0.07-9.el8.x86_64.rpm          64 kB/s |  16 kB     00:00[0m
+[0;32m2023-01-16T16:33:21+01:00:     azure-arm: (14/25): libgcc-8.5.0-16.el8_7.alma.x86_64.rpm  3.5 MB/s |  80 kB     00:00[0m
+[0;32m2023-01-16T16:33:22+01:00:     azure-arm: (15/25): libgfortran-8.5.0-16.el8_7.alma.x86_64  11 MB/s | 643 kB     00:00[0m
+[0;32m2023-01-16T16:33:22+01:00:     azure-arm: (16/25): libgomp-8.5.0-16.el8_7.alma.x86_64.rpm 7.9 MB/s | 206 kB     00:00[0m
+[0;32m2023-01-16T16:33:22+01:00:     azure-arm: (17/25): libquadmath-8.5.0-16.el8_7.alma.x86_64 7.2 MB/s | 171 kB     00:00[0m
+[0;32m2023-01-16T16:33:22+01:00:     azure-arm: (18/25): libstdc++-8.5.0-16.el8_7.alma.x86_64.r  15 MB/s | 453 kB     00:00[0m
+[0;32m2023-01-16T16:33:22+01:00:     azure-arm: (19/25): htop-3.2.1-1.el8.x86_64.rpm            313 kB/s | 170 kB     00:00[0m
+[0;32m2023-01-16T16:33:22+01:00:     azure-arm: (20/25): Lmod-8.7.7-1.el8.x86_64.rpm            409 kB/s | 261 kB     00:00[0m
+[0;32m2023-01-16T16:33:22+01:00:     azure-arm: (21/25): cpp-8.5.0-16.el8_7.alma.x86_64.rpm      39 MB/s |  10 MB     00:00[0m
+[0;32m2023-01-16T16:33:22+01:00:     azure-arm: (22/25): jq-1.6-3.el8.x86_64.rpm                7.9 MB/s | 201 kB     00:00[0m
+[0;32m2023-01-16T16:33:22+01:00:     azure-arm: (23/25): libquadmath-devel-8.5.0-16.el8_7.alma. 1.0 MB/s |  24 kB     00:00[0m
+[0;32m2023-01-16T16:33:22+01:00:     azure-arm: (24/25): gcc-gfortran-8.5.0-16.el8_7.alma.x86_6  33 MB/s |  12 MB     00:00[0m
+[0;32m2023-01-16T16:33:22+01:00:     azure-arm: (25/25): gcc-8.5.0-16.el8_7.alma.x86_64.rpm      38 MB/s |  23 MB     00:00[0m
+[0;32m2023-01-16T16:33:22+01:00:     azure-arm: --------------------------------------------------------------------------------[0m
+[0;32m2023-01-16T16:33:22+01:00:     azure-arm: Total                                            21 MB/s |  65 MB     00:03[0m
+[0;32m2023-01-16T16:33:23+01:00:     azure-arm: Running transaction check[0m
+[0;32m2023-01-16T16:33:23+01:00:     azure-arm: Transaction check succeeded.[0m
+[0;32m2023-01-16T16:33:23+01:00:     azure-arm: Running transaction test[0m
+[0;32m2023-01-16T16:33:24+01:00:     azure-arm: Transaction test succeeded.[0m
+[0;32m2023-01-16T16:33:24+01:00:     azure-arm: Running transaction[0m
+[0;32m2023-01-16T16:33:25+01:00:     azure-arm:   Preparing        :                                                        1/1[0m
+[0;32m2023-01-16T16:33:25+01:00:     azure-arm:   Upgrading        : libquadmath-8.5.0-16.el8_7.alma.x86_64                1/35[0m
+[0;32m2023-01-16T16:33:25+01:00:     azure-arm:   Running scriptlet: libquadmath-8.5.0-16.el8_7.alma.x86_64                1/35[0m
+[0;32m2023-01-16T16:33:25+01:00:     azure-arm:   Upgrading        : libgcc-8.5.0-16.el8_7.alma.x86_64                     2/35[0m
+[0;32m2023-01-16T16:33:25+01:00:     azure-arm:   Running scriptlet: libgcc-8.5.0-16.el8_7.alma.x86_64                     2/35[0m
+[0;32m2023-01-16T16:33:25+01:00:     azure-arm:   Installing       : lua-5.3.4-12.el8.x86_64                               3/35[0m
+[0;32m2023-01-16T16:33:25+01:00:     azure-arm:   Upgrading        : libstdc++-8.5.0-16.el8_7.alma.x86_64                  4/35[0m
+[0;32m2023-01-16T16:33:25+01:00:     azure-arm:   Running scriptlet: libstdc++-8.5.0-16.el8_7.alma.x86_64                  4/35[0m
+[0;32m2023-01-16T16:33:25+01:00:     azure-arm:   Installing       : libICE-1.0.9-15.el8.x86_64                            5/35[0m
+[0;32m2023-01-16T16:33:25+01:00:     azure-arm:   Installing       : libSM-1.2.3-1.el8.x86_64                              6/35[0m
+[0;32m2023-01-16T16:33:26+01:00:     azure-arm:   Installing       : libstdc++-devel-8.5.0-16.el8_7.alma.x86_64            7/35[0m
+[0;32m2023-01-16T16:33:26+01:00:     azure-arm:   Installing       : lua-filesystem-1.6.3-7.el8.x86_64                     8/35[0m
+[0;32m2023-01-16T16:33:26+01:00:     azure-arm:   Upgrading        : libgfortran-8.5.0-16.el8_7.alma.x86_64                9/35[0m
+[0;32m2023-01-16T16:33:26+01:00:     azure-arm:   Running scriptlet: libgfortran-8.5.0-16.el8_7.alma.x86_64                9/35[0m
+[0;32m2023-01-16T16:33:27+01:00:     azure-arm:   Upgrading        : cpp-8.5.0-16.el8_7.alma.x86_64                       10/35[0m
+[0;32m2023-01-16T16:33:27+01:00:     azure-arm:   Running scriptlet: cpp-8.5.0-16.el8_7.alma.x86_64                       10/35[0m
+[0;32m2023-01-16T16:33:27+01:00:     azure-arm:   Upgrading        : libgomp-8.5.0-16.el8_7.alma.x86_64                   11/35[0m
+[0;32m2023-01-16T16:33:27+01:00:     azure-arm:   Running scriptlet: libgomp-8.5.0-16.el8_7.alma.x86_64                   11/35[0m
+[0;32m2023-01-16T16:33:29+01:00:     azure-arm:   Upgrading        : gcc-8.5.0-16.el8_7.alma.x86_64                       12/35[0m
+[0;32m2023-01-16T16:33:29+01:00:     azure-arm:   Running scriptlet: gcc-8.5.0-16.el8_7.alma.x86_64                       12/35[0m
+[0;32m2023-01-16T16:33:29+01:00:     azure-arm:   Upgrading        : libquadmath-devel-8.5.0-16.el8_7.alma.x86_64         13/35[0m
+[0;32m2023-01-16T16:33:29+01:00:     azure-arm:   Installing       : lua-term-0.07-9.el8.x86_64                           14/35[0m
+[0;32m2023-01-16T16:33:30+01:00:     azure-arm:   Installing       : lua-posix-33.3.1-9.el8.x86_64                        15/35[0m
+[0;32m2023-01-16T16:33:30+01:00:     azure-arm:   Installing       : lua-lpeg-1.0.1-6.el8.x86_64                          16/35[0m
+[0;32m2023-01-16T16:33:30+01:00:     azure-arm:   Installing       : lua-json-1.3.2-9.el8.noarch                          17/35[0m
+[0;32m2023-01-16T16:33:30+01:00:     azure-arm:   Installing       : hwloc-libs-2.2.0-3.el8.x86_64                        18/35[0m
+[0;32m2023-01-16T16:33:30+01:00:     azure-arm:   Installing       : hwloc-2.2.0-3.el8.x86_64                             19/35[0m
+[0;32m2023-01-16T16:33:30+01:00:     azure-arm:   Running scriptlet: hwloc-2.2.0-3.el8.x86_64                             19/35[0m
+[0;32m2023-01-16T16:33:30+01:00:     azure-arm:   Installing       : Lmod-8.7.7-1.el8.x86_64                              20/35[0m
+[0;32m2023-01-16T16:33:30+01:00:     azure-arm:   Running scriptlet: Lmod-8.7.7-1.el8.x86_64                              20/35[0m
+[0;32m2023-01-16T16:33:31+01:00:     azure-arm:   Upgrading        : gcc-gfortran-8.5.0-16.el8_7.alma.x86_64              21/35[0m
+[0;32m2023-01-16T16:33:32+01:00:     azure-arm:   Running scriptlet: gcc-gfortran-8.5.0-16.el8_7.alma.x86_64              21/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Installing       : gcc-c++-8.5.0-16.el8_7.alma.x86_64                   22/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Installing       : libXt-1.1.5-12.el8.x86_64                            23/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Upgrading        : jq-1.6-3.el8.x86_64                                  24/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Installing       : htop-3.2.1-1.el8.x86_64                              25/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Running scriptlet: gcc-gfortran-8.5.0-4.el8_5.alma.x86_64               26/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Cleanup          : gcc-gfortran-8.5.0-4.el8_5.alma.x86_64               26/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Cleanup          : libgfortran-8.5.0-4.el8_5.alma.x86_64                27/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Running scriptlet: libgfortran-8.5.0-4.el8_5.alma.x86_64                27/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Cleanup          : libstdc++-8.5.0-4.el8_5.alma.x86_64                  28/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Running scriptlet: libstdc++-8.5.0-4.el8_5.alma.x86_64                  28/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Cleanup          : libquadmath-devel-8.5.0-4.el8_5.alma.x86_64          29/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Running scriptlet: gcc-8.5.0-4.el8_5.alma.x86_64                        30/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Cleanup          : gcc-8.5.0-4.el8_5.alma.x86_64                        30/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Running scriptlet: cpp-8.5.0-4.el8_5.alma.x86_64                        31/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Cleanup          : cpp-8.5.0-4.el8_5.alma.x86_64                        31/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Cleanup          : libgcc-8.5.0-4.el8_5.alma.x86_64                     32/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Running scriptlet: libgcc-8.5.0-4.el8_5.alma.x86_64                     32/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Running scriptlet: libgomp-8.5.0-4.el8_5.alma.x86_64                    33/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Cleanup          : libgomp-8.5.0-4.el8_5.alma.x86_64                    33/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Running scriptlet: libgomp-8.5.0-4.el8_5.alma.x86_64                    33/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Running scriptlet: libquadmath-8.5.0-4.el8_5.alma.x86_64                34/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Cleanup          : libquadmath-8.5.0-4.el8_5.alma.x86_64                34/35[0m
+[0;32m2023-01-16T16:33:33+01:00:     azure-arm:   Running scriptlet: libquadmath-8.5.0-4.el8_5.alma.x86_64                34/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Cleanup          : jq-1.5-12.el8.x86_64                                 35/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Running scriptlet: jq-1.5-12.el8.x86_64                                 35/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : hwloc-2.2.0-3.el8.x86_64                              1/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : hwloc-libs-2.2.0-3.el8.x86_64                         2/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : gcc-c++-8.5.0-16.el8_7.alma.x86_64                    3/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libICE-1.0.9-15.el8.x86_64                            4/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libSM-1.2.3-1.el8.x86_64                              5/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libXt-1.1.5-12.el8.x86_64                             6/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libstdc++-devel-8.5.0-16.el8_7.alma.x86_64            7/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : lua-5.3.4-12.el8.x86_64                               8/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : lua-json-1.3.2-9.el8.noarch                           9/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : lua-lpeg-1.0.1-6.el8.x86_64                          10/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : lua-filesystem-1.6.3-7.el8.x86_64                    11/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : lua-posix-33.3.1-9.el8.x86_64                        12/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : Lmod-8.7.7-1.el8.x86_64                              13/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : htop-3.2.1-1.el8.x86_64                              14/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : lua-term-0.07-9.el8.x86_64                           15/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libgcc-8.5.0-16.el8_7.alma.x86_64                    16/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libgcc-8.5.0-4.el8_5.alma.x86_64                     17/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libgfortran-8.5.0-16.el8_7.alma.x86_64               18/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libgfortran-8.5.0-4.el8_5.alma.x86_64                19/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libgomp-8.5.0-16.el8_7.alma.x86_64                   20/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libgomp-8.5.0-4.el8_5.alma.x86_64                    21/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libquadmath-8.5.0-16.el8_7.alma.x86_64               22/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libquadmath-8.5.0-4.el8_5.alma.x86_64                23/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libstdc++-8.5.0-16.el8_7.alma.x86_64                 24/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libstdc++-8.5.0-4.el8_5.alma.x86_64                  25/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : cpp-8.5.0-16.el8_7.alma.x86_64                       26/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : cpp-8.5.0-4.el8_5.alma.x86_64                        27/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : gcc-8.5.0-16.el8_7.alma.x86_64                       28/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : gcc-8.5.0-4.el8_5.alma.x86_64                        29/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : gcc-gfortran-8.5.0-16.el8_7.alma.x86_64              30/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : gcc-gfortran-8.5.0-4.el8_5.alma.x86_64               31/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : jq-1.6-3.el8.x86_64                                  32/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : jq-1.5-12.el8.x86_64                                 33/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libquadmath-devel-8.5.0-16.el8_7.alma.x86_64         34/35[0m
+[0;32m2023-01-16T16:33:34+01:00:     azure-arm:   Verifying        : libquadmath-devel-8.5.0-4.el8_5.alma.x86_64          35/35[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm: Upgraded:[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   cpp-8.5.0-16.el8_7.alma.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   gcc-8.5.0-16.el8_7.alma.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   gcc-gfortran-8.5.0-16.el8_7.alma.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   jq-1.6-3.el8.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   libgcc-8.5.0-16.el8_7.alma.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   libgfortran-8.5.0-16.el8_7.alma.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   libgomp-8.5.0-16.el8_7.alma.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   libquadmath-8.5.0-16.el8_7.alma.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   libquadmath-devel-8.5.0-16.el8_7.alma.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   libstdc++-8.5.0-16.el8_7.alma.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm: Installed:[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   Lmod-8.7.7-1.el8.x86_64                    gcc-c++-8.5.0-16.el8_7.alma.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   htop-3.2.1-1.el8.x86_64                    hwloc-2.2.0-3.el8.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   hwloc-libs-2.2.0-3.el8.x86_64              libICE-1.0.9-15.el8.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   libSM-1.2.3-1.el8.x86_64                   libXt-1.1.5-12.el8.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   libstdc++-devel-8.5.0-16.el8_7.alma.x86_64 lua-5.3.4-12.el8.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   lua-filesystem-1.6.3-7.el8.x86_64          lua-json-1.3.2-9.el8.noarch[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   lua-lpeg-1.0.1-6.el8.x86_64                lua-posix-33.3.1-9.el8.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:   lua-term-0.07-9.el8.x86_64[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm: Complete![0m
+[0;32m2023-01-16T16:33:35+01:00:     azure-arm: + dnf install -y git cmake gcc ninja-build make libnl3-devel libnl3[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: Last metadata expiration check: 0:01:28 ago on Mon 16 Jan 2023 03:32:08 PM UTC.[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: Package gcc-8.5.0-16.el8_7.alma.x86_64 is already installed.[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: Package make-1:4.2.1-10.el8.x86_64 is already installed.[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: Package libnl3-3.5.0-1.el8.x86_64 is already installed.[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: Dependencies resolved.[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  Package               Arch        Version                Repository       Size[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: Installing:[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mcmake                (B[m x86_64      3.20.2-4.el8           appstream        12 M[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mgit                  (B[m x86_64      2.31.1-2.el8           appstream       160 k[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mlibnl3-devel         (B[m x86_64      3.7.0-1.el8            baseos           84 k[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mninja-build          (B[m x86_64      1.8.2-1.el8            powertools      138 k[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: Upgrading:[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mlibnl3               (B[m x86_64      3.7.0-1.el8            baseos          336 k[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mlibnl3-cli           (B[m x86_64      3.7.0-1.el8            baseos          192 k[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mmake                 (B[m x86_64      1:4.2.1-11.el8         baseos          497 k[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: Installing dependencies:[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mcmake-data           (B[m noarch      3.20.2-4.el8           appstream       1.7 M[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mcmake-filesystem     (B[m x86_64      3.20.2-4.el8           appstream        43 k[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mcmake-rpm-macros     (B[m noarch      3.20.2-4.el8           appstream        43 k[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mgit-core             (B[m x86_64      2.31.1-2.el8           appstream       4.7 M[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mgit-core-doc         (B[m noarch      2.31.1-2.el8           appstream       2.6 M[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mlibuv                (B[m x86_64      1:1.41.1-1.el8_4       appstream       155 k[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mperl-Error           (B[m noarch      1:0.17025-2.el8        appstream        46 k[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mperl-Git             (B[m noarch      2.31.1-2.el8           appstream        77 k[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:  [1m[32mperl-TermReadKey     (B[m x86_64      2.37-7.el8             appstream        40 k[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: Transaction Summary[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: Install  13 Packages[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: Upgrade   3 Packages[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: Total download size: 23 M[0m
+[0;32m2023-01-16T16:33:36+01:00:     azure-arm: Downloading Packages:[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (1/16): libnl3-devel-3.7.0-1.el8.x86_64.rpm     1.1 MB/s |  84 kB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (2/16): cmake-filesystem-3.20.2-4.el8.x86_64.rp 1.5 MB/s |  43 kB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (3/16): cmake-rpm-macros-3.20.2-4.el8.noarch.rp 1.9 MB/s |  43 kB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (4/16): cmake-data-3.20.2-4.el8.noarch.rpm       10 MB/s | 1.7 MB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (5/16): git-2.31.1-2.el8.x86_64.rpm             3.1 MB/s | 160 kB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (6/16): git-core-2.31.1-2.el8.x86_64.rpm         46 MB/s | 4.7 MB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (7/16): git-core-doc-2.31.1-2.el8.noarch.rpm     21 MB/s | 2.6 MB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (8/16): libuv-1.41.1-1.el8_4.x86_64.rpm         4.3 MB/s | 155 kB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (9/16): perl-Error-0.17025-2.el8.noarch.rpm     2.1 MB/s |  46 kB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (10/16): perl-Git-2.31.1-2.el8.noarch.rpm       3.4 MB/s |  77 kB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (11/16): perl-TermReadKey-2.37-7.el8.x86_64.rpm 1.8 MB/s |  40 kB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (12/16): ninja-build-1.8.2-1.el8.x86_64.rpm     5.9 MB/s | 138 kB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (13/16): libnl3-3.7.0-1.el8.x86_64.rpm           12 MB/s | 336 kB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (14/16): libnl3-cli-3.7.0-1.el8.x86_64.rpm      7.3 MB/s | 192 kB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (15/16): cmake-3.20.2-4.el8.x86_64.rpm           24 MB/s |  12 MB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: (16/16): make-4.2.1-11.el8.x86_64.rpm           3.7 MB/s | 497 kB     00:00[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: --------------------------------------------------------------------------------[0m
+[0;32m2023-01-16T16:33:38+01:00:     azure-arm: Total                                            13 MB/s |  23 MB     00:01[0m
+[0;32m2023-01-16T16:33:39+01:00:     azure-arm: Running transaction check[0m
+[0;32m2023-01-16T16:33:39+01:00:     azure-arm: Transaction check succeeded.[0m
+[0;32m2023-01-16T16:33:39+01:00:     azure-arm: Running transaction test[0m
+[0;32m2023-01-16T16:33:39+01:00:     azure-arm: Transaction test succeeded.[0m
+[0;32m2023-01-16T16:33:39+01:00:     azure-arm: Running transaction[0m
+[0;32m2023-01-16T16:33:39+01:00:     azure-arm:   Preparing        :                                                        1/1[0m
+[0;32m2023-01-16T16:33:40+01:00:     azure-arm:   Upgrading        : libnl3-3.7.0-1.el8.x86_64                             1/19[0m
+[0;32m2023-01-16T16:33:40+01:00:     azure-arm:   Running scriptlet: libnl3-3.7.0-1.el8.x86_64                             1/19[0m
+[0;32m2023-01-16T16:33:40+01:00:     azure-arm:   Installing       : git-core-2.31.1-2.el8.x86_64                          2/19[0m
+[0;32m2023-01-16T16:33:40+01:00:     azure-arm:   Installing       : cmake-rpm-macros-3.20.2-4.el8.noarch                  3/19[0m
+[0;32m2023-01-16T16:33:40+01:00:     azure-arm:   Installing       : cmake-filesystem-3.20.2-4.el8.x86_64                  4/19[0m
+[0;32m2023-01-16T16:33:41+01:00:     azure-arm:   Installing       : git-core-doc-2.31.1-2.el8.noarch                      5/19[0m
+[0;32m2023-01-16T16:33:41+01:00:     azure-arm:   Upgrading        : libnl3-cli-3.7.0-1.el8.x86_64                         6/19[0m
+[0;32m2023-01-16T16:33:42+01:00:     azure-arm:   Running scriptlet: libnl3-cli-3.7.0-1.el8.x86_64                         6/19[0m
+[0;32m2023-01-16T16:33:42+01:00:     azure-arm:   Upgrading        : make-1:4.2.1-11.el8.x86_64                            7/19[0m
+[0;32m2023-01-16T16:33:42+01:00:     azure-arm:   Running scriptlet: make-1:4.2.1-11.el8.x86_64                            7/19[0m
+[0;32m2023-01-16T16:33:42+01:00:     azure-arm:   Installing       : perl-TermReadKey-2.37-7.el8.x86_64                    8/19[0m
+[0;32m2023-01-16T16:33:42+01:00:     azure-arm:   Installing       : perl-Error-1:0.17025-2.el8.noarch                     9/19[0m
+[0;32m2023-01-16T16:33:42+01:00:     azure-arm:   Installing       : perl-Git-2.31.1-2.el8.noarch                         10/19[0m
+[0;32m2023-01-16T16:33:42+01:00:     azure-arm:   Installing       : git-2.31.1-2.el8.x86_64                              11/19[0m
+[0;32m2023-01-16T16:33:42+01:00:     azure-arm:   Installing       : libuv-1:1.41.1-1.el8_4.x86_64                        12/19[0m
+[0;32m2023-01-16T16:33:44+01:00:     azure-arm:   Installing       : cmake-data-3.20.2-4.el8.noarch                       13/19[0m
+[0;32m2023-01-16T16:33:45+01:00:     azure-arm:   Installing       : cmake-3.20.2-4.el8.x86_64                            14/19[0m
+[0;32m2023-01-16T16:33:45+01:00:     azure-arm:   Installing       : libnl3-devel-3.7.0-1.el8.x86_64                      15/19[0m
+[0;32m2023-01-16T16:33:45+01:00:     azure-arm:   Installing       : ninja-build-1.8.2-1.el8.x86_64                       16/19[0m
+[0;32m2023-01-16T16:33:45+01:00:     azure-arm:   Cleanup          : libnl3-cli-3.5.0-1.el8.x86_64                        17/19[0m
+[0;32m2023-01-16T16:33:45+01:00:     azure-arm:   Running scriptlet: libnl3-cli-3.5.0-1.el8.x86_64                        17/19[0m
+[0;32m2023-01-16T16:33:45+01:00:     azure-arm:   Cleanup          : libnl3-3.5.0-1.el8.x86_64                            18/19[0m
+[0;32m2023-01-16T16:33:45+01:00:     azure-arm:   Running scriptlet: libnl3-3.5.0-1.el8.x86_64                            18/19[0m
+[0;32m2023-01-16T16:33:45+01:00:     azure-arm:   Running scriptlet: make-1:4.2.1-10.el8.x86_64                           19/19[0m
+[0;32m2023-01-16T16:33:45+01:00:     azure-arm:   Cleanup          : make-1:4.2.1-10.el8.x86_64                           19/19[0m
+[0;32m2023-01-16T16:33:45+01:00:     azure-arm:   Running scriptlet: make-1:4.2.1-10.el8.x86_64                           19/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : libnl3-devel-3.7.0-1.el8.x86_64                       1/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : cmake-3.20.2-4.el8.x86_64                             2/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : cmake-data-3.20.2-4.el8.noarch                        3/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : cmake-filesystem-3.20.2-4.el8.x86_64                  4/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : cmake-rpm-macros-3.20.2-4.el8.noarch                  5/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : git-2.31.1-2.el8.x86_64                               6/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : git-core-2.31.1-2.el8.x86_64                          7/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : git-core-doc-2.31.1-2.el8.noarch                      8/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : libuv-1:1.41.1-1.el8_4.x86_64                         9/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : perl-Error-1:0.17025-2.el8.noarch                    10/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : perl-Git-2.31.1-2.el8.noarch                         11/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : perl-TermReadKey-2.37-7.el8.x86_64                   12/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : ninja-build-1.8.2-1.el8.x86_64                       13/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : libnl3-3.7.0-1.el8.x86_64                            14/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : libnl3-3.5.0-1.el8.x86_64                            15/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : libnl3-cli-3.7.0-1.el8.x86_64                        16/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : libnl3-cli-3.5.0-1.el8.x86_64                        17/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : make-1:4.2.1-11.el8.x86_64                           18/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   Verifying        : make-1:4.2.1-10.el8.x86_64                           19/19[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm: Upgraded:[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   libnl3-3.7.0-1.el8.x86_64             libnl3-cli-3.7.0-1.el8.x86_64[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   make-1:4.2.1-11.el8.x86_64[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm: Installed:[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   cmake-3.20.2-4.el8.x86_64              cmake-data-3.20.2-4.el8.noarch[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   cmake-filesystem-3.20.2-4.el8.x86_64   cmake-rpm-macros-3.20.2-4.el8.noarch[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   git-2.31.1-2.el8.x86_64                git-core-2.31.1-2.el8.x86_64[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   git-core-doc-2.31.1-2.el8.noarch       libnl3-devel-3.7.0-1.el8.x86_64[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   libuv-1:1.41.1-1.el8_4.x86_64          ninja-build-1.8.2-1.el8.x86_64[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   perl-Error-1:0.17025-2.el8.noarch      perl-Git-2.31.1-2.el8.noarch[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:   perl-TermReadKey-2.37-7.el8.x86_64[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm: Complete![0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm: + pushd /tmp[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm: /tmp /home/packer[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm: + rdma_core_branch=stable-v34[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm: + git clone -b stable-v34 https://github.com/linux-rdma/rdma-core.git[0m
+[0;32m2023-01-16T16:33:46+01:00:     azure-arm: Cloning into 'rdma-core'...[0m
+[0;32m2023-01-16T16:33:47+01:00:     azure-arm: remote: Enumerating objects: 61094, done.[K[0m
+[0;32m2023-01-16T16:33:47+01:00:     azure-arm: remote: Counting objects: 100% (1234/1234), done.[K[0m
+[0;32m2023-01-16T16:33:47+01:00:     azure-arm: remote: Compressing objects: 100% (382/382), done.[K[0m
+[0;32m2023-01-16T16:33:48+01:00:     azure-arm: remote: Total 61094 (delta 897), reused 1102 (delta 842), pack-reused 59860[K[0m
+[0;32m2023-01-16T16:33:48+01:00:     azure-arm: Receiving objects: 100% (61094/61094), 21.48 MiB | 21.84 MiB/s, done.[0m
+[0;32m2023-01-16T16:33:49+01:00:     azure-arm: Resolving deltas: 100% (47497/47497), done.[0m
+[0;32m2023-01-16T16:33:49+01:00:     azure-arm: + pushd rdma-core[0m
+[0;32m2023-01-16T16:33:49+01:00:     azure-arm: /tmp/rdma-core /tmp /home/packer[0m
+[0;32m2023-01-16T16:33:49+01:00:     azure-arm: + bash build.sh[0m
+[0;32m2023-01-16T16:33:49+01:00:     azure-arm: CMake Deprecation Warning at CMakeLists.txt:56 (cmake_minimum_required):[0m
+[0;32m2023-01-16T16:33:49+01:00:     azure-arm:   Compatibility with CMake < 2.8.12 will be removed from a future version of[0m
+[0;32m2023-01-16T16:33:49+01:00:     azure-arm:   CMake.[0m
+[0;32m2023-01-16T16:33:49+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:33:49+01:00:     azure-arm:   Update the VERSION argument <min> value or use a ...<max> suffix to tell[0m
+[0;32m2023-01-16T16:33:49+01:00:     azure-arm:   CMake that the project does not need compatibility with older versions.[0m
+[0;32m2023-01-16T16:33:49+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:33:49+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:33:49+01:00:     azure-arm: -- The C compiler identification is GNU 8.5.0[0m
+[0;32m2023-01-16T16:33:49+01:00:     azure-arm: -- Detecting C compiler ABI info[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Detecting C compiler ABI info - done[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Check for working C compiler: /bin/cc - skipped[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Detecting C compile features[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Detecting C compile features - done[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Could NOT find cython (missing: CYTHON_EXECUTABLE CYTHON_VERSION_STRING)[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_NO_SPARSE[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_NO_SPARSE - Success[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WARNINGS[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WARNINGS - Success[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WMISSING_PROTOTYPES[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WMISSING_PROTOTYPES - Success[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WMISSING_DECLARATIONS[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WMISSING_DECLARATIONS - Success[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WWRITE_STRINGS[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WWRITE_STRINGS - Success[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WFORMAT_2[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WFORMAT_2 - Success[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WCAST_FUNCTION[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WCAST_FUNCTION - Success[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WFORMAT_NONLITERAL[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WFORMAT_NONLITERAL - Success[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WDATE_TIME[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WDATE_TIME - Success[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WNESTED_EXTERNS[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WNESTED_EXTERNS - Success[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WORKING_SHADOW[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WORKING_SHADOW - Success[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WORKING_MISSING_FIELD_INITIALIZERS[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_C_WORKING_MISSING_FIELD_INITIALIZERS - Success[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_NO_STRICT_ALIASING[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_NO_STRICT_ALIASING - Success[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_NO_VAR_TRACKING_ASSIGNMENTS[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_NO_VAR_TRACKING_ASSIGNMENTS - Success[0m
+[0;32m2023-01-16T16:33:50+01:00:     azure-arm: -- Performing Test HAVE_FUNC_ATTRIBUTE_IFUNC[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_FUNC_ATTRIBUTE_IFUNC - Success[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_FUNC_ATTRIBUTE_SYMVER[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_FUNC_ATTRIBUTE_SYMVER - Failed[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAS_CLOEXEC[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAS_CLOEXEC - Success[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_FUNC_ATTRIBUTE_ALWAYS_INLINE[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_FUNC_ATTRIBUTE_ALWAYS_INLINE - Success[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_LONG_LONG_U64[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_LONG_LONG_U64 - Success[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_GLIBC_UAPI_COMPAT[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_GLIBC_UAPI_COMPAT - Success[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_WORKING_STRICT_ALIASING[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_WORKING_STRICT_ALIASING - Success[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_LARGE_FILES[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_LARGE_FILES - Success[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Looking for stdatomic.h[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Looking for stdatomic.h - found[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_TARGET_SSE[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test HAVE_TARGET_SSE - Success[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test SUPPORTS_AS_NEEDED[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test SUPPORTS_AS_NEEDED - Success[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test SUPPORTS_NO_UNDEFINED[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test SUPPORTS_NO_UNDEFINED - Success[0m
+[0;32m2023-01-16T16:33:51+01:00:     azure-arm: -- Performing Test _LDSYMVER_SUCCESS[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Performing Test _LDSYMVER_SUCCESS - Success[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Found LDSymVer: GNU[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Could NOT find pandoc (missing: PANDOC_EXECUTABLE PANDOC_VERSION_STRING)[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Could NOT find rst2man (missing: RST2MAN_EXECUTABLE RST2MAN_VERSION_STRING)[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Looking for pthread.h[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Looking for pthread.h - found[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Performing Test CMAKE_HAVE_LIBC_PTHREAD[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Looking for pthread_create in pthreads[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Looking for pthread_create in pthreads - not found[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Looking for pthread_create in pthread[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Looking for pthread_create in pthread - found[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Found Threads: TRUE[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Found PkgConfig: /bin/pkg-config (found version "1.4.2")[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Checking for modules 'libnl-3.0;libnl-route-3.0'[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: --   Found libnl-3.0, version 3.7.0[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: --   Found libnl-route-3.0, version 3.7.0[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Performing Test HAVE_WORKING_IF_H[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Performing Test HAVE_WORKING_IF_H - Success[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Could NOT find UDev (missing: LIBUDEV_LIBRARY)[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Check size of long[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Check size of long - done[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Performing Test HAVE_COHERENT_DMA[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Performing Test HAVE_COHERENT_DMA - Success[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Could NOT find Systemd (missing: SYSTEMD_LIBRARIES LIBSYSTEMD_INCLUDE_DIRS)[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Looking for valgrind/memcheck.h[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Looking for valgrind/memcheck.h - not found[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Looking for valgrind/drd.h[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Looking for valgrind/drd.h - not found[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Performing Test LIBC_HAS_LIBRT[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Performing Test LIBC_HAS_LIBRT - Success[0m
+[0;32m2023-01-16T16:33:52+01:00:     azure-arm: -- Performing Test HAVE_STATIC_ASSERT[0m
+[0;32m2023-01-16T16:33:53+01:00:     azure-arm: -- Performing Test HAVE_STATIC_ASSERT - Success[0m
+[0;32m2023-01-16T16:33:53+01:00:     azure-arm: -- Performing Test HAVE_C_WSTRICT_PROTOTYPES[0m
+[0;32m2023-01-16T16:33:53+01:00:     azure-arm: -- Performing Test HAVE_C_WSTRICT_PROTOTYPES - Success[0m
+[0;32m2023-01-16T16:33:53+01:00:     azure-arm: -- Performing Test HAVE_C_WOLD_STYLE_DEFINITION[0m
+[0;32m2023-01-16T16:33:53+01:00:     azure-arm: -- Performing Test HAVE_C_WOLD_STYLE_DEFINITION - Success[0m
+[0;32m2023-01-16T16:33:53+01:00:     azure-arm: -- Performing Test HAVE_C_WREDUNDANT_DECLS[0m
+[0;32m2023-01-16T16:33:53+01:00:     azure-arm: -- Performing Test HAVE_C_WREDUNDANT_DECLS - Success[0m
+[0;32m2023-01-16T16:33:53+01:00:     azure-arm: -- Performing Test HAVE_GLIBC_GETRANDOM[0m
+[0;32m2023-01-16T16:33:53+01:00:     azure-arm: -- Performing Test HAVE_GLIBC_GETRANDOM - Success[0m
+[0;32m2023-01-16T16:33:57+01:00:     azure-arm: -- Missing Optional Items:[0m
+[0;32m2023-01-16T16:33:57+01:00:     azure-arm: --  Compiler attribute symver NOT supported, can not use LTO[0m
+[0;32m2023-01-16T16:33:57+01:00:     azure-arm: --  Valgrind memcheck.h NOT enabled[0m
+[0;32m2023-01-16T16:33:57+01:00:     azure-arm: --  Valgrind drd.h NOT enabled[0m
+[0;32m2023-01-16T16:33:57+01:00:     azure-arm: --  pandoc NOT found and NO prebuilt man pages. 'install' disabled[0m
+[0;32m2023-01-16T16:33:57+01:00:     azure-arm: --  rst2man NOT found and NO prebuilt man pages. 'install' disabled[0m
+[0;32m2023-01-16T16:33:57+01:00:     azure-arm: --  cython NOT found (disabling pyverbs)[0m
+[0;32m2023-01-16T16:33:57+01:00:     azure-arm: --  libsystemd NOT found (disabling features)[0m
+[0;32m2023-01-16T16:33:57+01:00:     azure-arm: --  libudev NOT found (disabling features)[0m
+[0;32m2023-01-16T16:33:57+01:00:     azure-arm: -- Configuring done[0m
+[0;32m2023-01-16T16:33:57+01:00:     azure-arm: -- Generating done[0m
+[0;32m2023-01-16T16:33:57+01:00:     azure-arm: -- Build files have been written to: /tmp/rdma-core/build[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: [321/321] Linking C shared module lib/libibacmp.so[K[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: + cp build/bin/rdma_rename /usr/sbin/rdma_rename_stable-v34[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: + popd[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: /tmp /home/packer[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: + rm -rf rdma-core[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: + popd[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: /home/packer[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: + cat[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: + chmod 755 /usr/sbin/azure_persistent_rdma_naming.sh[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: + cat[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: + systemctl enable azure_persistent_rdma_naming.service[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: Created symlink /etc/systemd/system/multi-user.target.wants/azure_persistent_rdma_naming.service → /etc/systemd/system/azure_persistent_rdma_naming.service.[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: + systemctl start azure_persistent_rdma_naming.service[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: #### Configuration repo for InfluxDB:[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: [influxdb][0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: name = InfluxDB Repository - RHEL $releasever[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: baseurl = https://repos.influxdata.com/rhel/$releasever/$basearch/stable[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: enabled = 1[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: gpgcheck = 1[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: gpgkey = https://repos.influxdata.com/influxdb.key[0m
+[0;32m2023-01-16T16:34:07+01:00:     azure-arm: #### Telegraf Installation:[0m
+[0;32m2023-01-16T16:34:08+01:00:     azure-arm: InfluxDB Repository - RHEL 8                    101 kB/s |  48 kB     00:00[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm: Dependencies resolved.[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm:  Package           Architecture    Version              Repository         Size[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm: Installing:[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm:  [1m[32mtelegraf         (B[m x86_64          1.25.0-1             influxdb           42 M[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm: Transaction Summary[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm: ================================================================================[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm: Install  1 Package[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm: Total download size: 42 M[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm: Installed size: 152 M[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm: Downloading Packages:[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm: telegraf-1.25.0-1.x86_64.rpm                     56 MB/s |  42 MB     00:00[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm: --------------------------------------------------------------------------------[0m
+[0;32m2023-01-16T16:34:09+01:00:     azure-arm: Total                                            56 MB/s |  42 MB     00:00[0m
+[0;32m2023-01-16T16:34:10+01:00:     azure-arm: InfluxDB Repository - RHEL 8                     52 kB/s | 3.0 kB     00:00[0m
+[0;32m2023-01-16T16:34:10+01:00:     azure-arm: Importing GPG key 0x2582E0C5:[0m
+[0;32m2023-01-16T16:34:10+01:00:     azure-arm:  Userid     : "InfluxDB Packaging Service <support@influxdb.com>"[0m
+[0;32m2023-01-16T16:34:10+01:00:     azure-arm:  Fingerprint: 05CE 1508 5FC0 9D18 E99E FB22 684A 14CF 2582 E0C5[0m
+[0;32m2023-01-16T16:34:10+01:00:     azure-arm:  From       : https://repos.influxdata.com/influxdb.key[0m
+[0;32m2023-01-16T16:34:10+01:00:     azure-arm: Key imported successfully[0m
+[0;32m2023-01-16T16:34:10+01:00:     azure-arm: Running transaction check[0m
+[0;32m2023-01-16T16:34:10+01:00:     azure-arm: Transaction check succeeded.[0m
+[0;32m2023-01-16T16:34:10+01:00:     azure-arm: Running transaction test[0m
+[0;32m2023-01-16T16:34:10+01:00:     azure-arm: Transaction test succeeded.[0m
+[0;32m2023-01-16T16:34:10+01:00:     azure-arm: Running transaction[0m
+[0;32m2023-01-16T16:34:10+01:00:     azure-arm:   Preparing        :                                                        1/1[0m
+[0;32m2023-01-16T16:34:10+01:00:     azure-arm:   Running scriptlet: telegraf-1.25.0-1.x86_64                               1/1[0m
+[0;32m2023-01-16T16:34:13+01:00:     azure-arm:   Installing       : telegraf-1.25.0-1.x86_64                               1/1[0m
+[0;32m2023-01-16T16:34:13+01:00:     azure-arm:   Running scriptlet: telegraf-1.25.0-1.x86_64                               1/1[0m
+[0;32m2023-01-16T16:34:13+01:00:     azure-arm: Created symlink /etc/systemd/system/multi-user.target.wants/telegraf.service → /usr/lib/systemd/system/telegraf.service.[0m
+[0;32m2023-01-16T16:34:13+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:34:14+01:00:     azure-arm:   Verifying        : telegraf-1.25.0-1.x86_64                               1/1[0m
+[0;32m2023-01-16T16:34:14+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:34:14+01:00:     azure-arm: Installed:[0m
+[0;32m2023-01-16T16:34:14+01:00:     azure-arm:   telegraf-1.25.0-1.x86_64[0m
+[0;32m2023-01-16T16:34:14+01:00:     azure-arm:[0m
+[0;32m2023-01-16T16:34:14+01:00:     azure-arm: Complete![0m
+[0;32m2023-01-16T16:34:14+01:00:     azure-arm:  This is the end[0m
+[0;32m2023-01-16T16:34:14+01:00:     azure-arm: No transaction which manipulates package 'sync' was found.[0m
+[0;32m2023-01-16T16:34:14+01:00:     azure-arm: WARNING! The waagent service will be stopped.[0m
+[0;32m2023-01-16T16:34:14+01:00:     azure-arm: WARNING! All SSH host key pairs will be deleted.[0m
+[0;32m2023-01-16T16:34:14+01:00:     azure-arm: WARNING! Cached DHCP leases will be deleted.[0m
+[0;32m2023-01-16T16:34:14+01:00:     azure-arm: WARNING! root password will be disabled. You will not be able to login as root.[0m
+[0;32m2023-01-16T16:34:15+01:00:     azure-arm: WARNING! /etc/resolv.conf will be deleted.[0m
+[0;32m2023-01-16T16:34:15+01:00:     azure-arm: WARNING! packer account and entire home directory will be deleted.[0m
+[0;32m2023-01-16T16:34:15+01:00:     azure-arm: 2023-01-16T15:34:15.064716Z INFO MainThread Examine /proc/net/route for primary interface[0m
+[0;32m2023-01-16T16:34:15+01:00:     azure-arm: 2023-01-16T15:34:15.065315Z INFO MainThread Primary interface is [eth0][0m
+[1;32m2023-01-16T16:34:18+01:00: ==> azure-arm: Querying the machine's properties ...[0m
+[1;32m2023-01-16T16:34:18+01:00: ==> azure-arm:  -> ResourceGroupName : 'rgsig'[0m
+[1;32m2023-01-16T16:34:18+01:00: ==> azure-arm:  -> ComputeName       : 'pkrvmhw08evczwj'[0m
+[1;32m2023-01-16T16:34:18+01:00: ==> azure-arm:  -> Managed OS Disk   : '/subscriptions/083763cf-8f75-4112-9ee5-2e09045c8c8f/resourceGroups/rgsig/providers/Microsoft.Compute/disks/pkroshw08evczwj'[0m
+[1;32m2023-01-16T16:34:18+01:00: ==> azure-arm: Querying the machine's additional disks properties ...[0m
+[1;32m2023-01-16T16:34:18+01:00: ==> azure-arm:  -> ResourceGroupName : 'rgsig'[0m
+[1;32m2023-01-16T16:34:18+01:00: ==> azure-arm:  -> ComputeName       : 'pkrvmhw08evczwj'[0m
+[1;32m2023-01-16T16:34:18+01:00: ==> azure-arm: Powering off machine ...[0m
+[1;32m2023-01-16T16:34:18+01:00: ==> azure-arm:  -> ResourceGroupName : 'rgsig'[0m
+[1;32m2023-01-16T16:34:18+01:00: ==> azure-arm:  -> ComputeName       : 'pkrvmhw08evczwj'[0m
+[1;32m2023-01-16T16:36:35+01:00: ==> azure-arm: Capturing image ...[0m
+[1;32m2023-01-16T16:36:35+01:00: ==> azure-arm:  -> Compute ResourceGroupName : 'rgsig'[0m
+[1;32m2023-01-16T16:36:35+01:00: ==> azure-arm:  -> Compute Name              : 'pkrvmhw08evczwj'[0m
+[1;32m2023-01-16T16:36:35+01:00: ==> azure-arm:  -> Compute Location          : 'westeurope'[0m
+[1;32m2023-01-16T16:36:35+01:00: ==> azure-arm:  -> Image ResourceGroupName   : 'rgsig'[0m
+[1;32m2023-01-16T16:36:35+01:00: ==> azure-arm:  -> Image Name                : 'alma-hpc-8.5'[0m
+[1;32m2023-01-16T16:36:35+01:00: ==> azure-arm:  -> Image Location            : 'westeurope'[0m
+[1;32m2023-01-16T16:37:07+01:00: ==> azure-arm: 
+==> azure-arm: Deleting individual resources ...[0m
+[1;32m2023-01-16T16:37:07+01:00: ==> azure-arm: Adding to deletion queue -> Microsoft.Compute/virtualMachines : 'pkrvmhw08evczwj'[0m
+[1;32m2023-01-16T16:37:07+01:00: ==> azure-arm: Adding to deletion queue -> Microsoft.Network/networkInterfaces : 'pkrnihw08evczwj'[0m
+[1;32m2023-01-16T16:37:07+01:00: ==> azure-arm: Adding to deletion queue -> Microsoft.Network/publicIPAddresses : 'pkriphw08evczwj'[0m
+[1;32m2023-01-16T16:37:07+01:00: ==> azure-arm: Adding to deletion queue -> Microsoft.Network/virtualNetworks : 'pkrvnhw08evczwj'[0m
+[1;32m2023-01-16T16:37:07+01:00: ==> azure-arm: Attempting deletion -> Microsoft.Network/networkInterfaces : 'pkrnihw08evczwj'[0m
+[1;32m2023-01-16T16:37:07+01:00: ==> azure-arm: Waiting for deletion of all resources...[0m
+[1;32m2023-01-16T16:37:07+01:00: ==> azure-arm: Attempting deletion -> Microsoft.Network/publicIPAddresses : 'pkriphw08evczwj'[0m
+[1;32m2023-01-16T16:37:07+01:00: ==> azure-arm: Attempting deletion -> Microsoft.Network/virtualNetworks : 'pkrvnhw08evczwj'[0m
+[1;32m2023-01-16T16:37:07+01:00: ==> azure-arm: Attempting deletion -> Microsoft.Compute/virtualMachines : 'pkrvmhw08evczwj'[0m
+[1;32m2023-01-16T16:37:07+01:00: ==> azure-arm: Error deleting resource. Will retry.
+==> azure-arm: Name: pkriphw08evczwj
+==> azure-arm: Error: network.PublicIPAddressesClient#Delete: Failure sending request: StatusCode=0 -- Original Error: Code="PublicIPAddressCannotBeDeleted" Message="Public IP address /subscriptions/083763cf-8f75-4112-9ee5-2e09045c8c8f/resourceGroups/rgsig/providers/Microsoft.Network/publicIPAddresses/pkriphw08evczwj can not be deleted since it is still allocated to resource /subscriptions/083763cf-8f75-4112-9ee5-2e09045c8c8f/resourceGroups/rgsig/providers/Microsoft.Network/networkInterfaces/pkrnihw08evczwj/ipConfigurations/ipconfig. In order to delete the public IP, disassociate/detach the Public IP address from the resource.  To learn how to do this, see aka.ms/deletepublicip." Details=[]
+==> azure-arm:[0m
+[1;32m2023-01-16T16:37:08+01:00: ==> azure-arm: Error deleting resource. Will retry.
+==> azure-arm: Name: pkrvnhw08evczwj
+==> azure-arm: Error: network.VirtualNetworksClient#Delete: Failure sending request: StatusCode=0 -- Original Error: Code="InUseSubnetCannotBeDeleted" Message="Subnet pkrsnhw08evczwj is in use by /subscriptions/083763cf-8f75-4112-9ee5-2e09045c8c8f/resourceGroups/rgsig/providers/Microsoft.Network/networkInterfaces/pkrnihw08evczwj/ipConfigurations/ipconfig and cannot be deleted. In order to delete the subnet, delete all the resources within the subnet. See aka.ms/deletesubnet." Details=[]
+==> azure-arm:[0m
+[1;32m2023-01-16T16:37:17+01:00: ==> azure-arm: Attempting deletion -> Microsoft.Network/publicIPAddresses : 'pkriphw08evczwj'[0m
+[1;32m2023-01-16T16:37:18+01:00: ==> azure-arm: Attempting deletion -> Microsoft.Network/virtualNetworks : 'pkrvnhw08evczwj'[0m
+[1;32m2023-01-16T16:37:28+01:00: ==> azure-arm:  Deleting -> Microsoft.Compute/disks : '/subscriptions/083763cf-8f75-4112-9ee5-2e09045c8c8f/resourceGroups/rgsig/providers/Microsoft.Compute/disks/pkroshw08evczwj'[0m
+[1;32m2023-01-16T16:37:59+01:00: ==> azure-arm: Removing the created Deployment object: 'pkrdphw08evczwj'[0m
+[1;32m2023-01-16T16:38:14+01:00: ==> azure-arm: 
+==> azure-arm: The resource group was not created by Packer, not deleting ...[0m
+[1;32m2023-01-16T16:38:14+01:00: Build 'azure-arm' finished after 8 minutes 45 seconds.[0m
+
+==> Wait completed after 8 minutes 45 seconds
+
+==> Builds finished. The artifacts of successful builds are:
+--> azure-arm: Azure.ResourceManagement.VMImage:
+
+OSType: Linux
+ManagedImageResourceGroupName: rgsig
+ManagedImageName: alma-hpc-8.5
+ManagedImageId: /subscriptions/083763cf-8f75-4112-9ee5-2e09045c8c8f/resourceGroups/rgsig/providers/Microsoft.Compute/images/alma-hpc-8.5
+ManagedImageLocation: westeurope
+

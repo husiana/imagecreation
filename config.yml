@@ -1,0 +1,23 @@
+---
+# azure location name as returned by the command :
+# az account list-locations -o table
+location: westeurope
+# Name of the resource group to create all resources
+resource_group: rgsig
+# If using an existing resource group set to true. Default is false
+# When using an existing resource group make sure the location match
+# the one of the existing resource group
+use_existing_rg: false
+
+# name of the admin account
+admin_user: azureuser
+
+# Pre-defined images
+images:
+  - name: mod-almalinux85-v2-rdma-gpgpu
+    publisher: modlinux
+    offer: almalinux
+    sku: 8_5-hpc-gen2
+    hyper_v: V2
+    os_type: Linux
+    version: 8.5

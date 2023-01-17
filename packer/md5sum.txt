@@ -1,0 +1,4 @@
+f1e79ca62ea70a34fd5340e468806ee9  ./scripts/almalinux/install_persistent_rdma.sh
+fc3a0e0abf0520a06c41e67daf80c254  ./scripts/almalinux/linux-setup.sh
+58dcb18ed26d6f9e62e5b043cd793af5  ./scripts/almalinux/telegraf.sh
+5bee69001f97ff1b46613a08ee53bf88  alma-hpc-8.5.json
