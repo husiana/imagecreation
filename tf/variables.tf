@@ -10,6 +10,12 @@ locals {
     admin_username=local.configuration_yml["admin_user"]
     location = local.configuration_yml["location"]
     resource_group = local.configuration_yml["resource_group"]
+    
+    virtual_network_name = local.configuration_yml["virtual_network_name"]
+    virtual_network_vnet_range = local.configuration_yml["virtual_network_vnet_range"]
+    virtual_network_subnet_name = local.configuration_yml["virtual_network_subnet_name"]
+    virtual_network_subnet_range = local.configuration_yml["virtual_network_subnet_range"]
+
     extra_tags = try(local.configuration_yml["tags"], null)
     packer_root_dir = "${path.cwd}/packer"
     common_tags = {
@@ -20,11 +26,12 @@ locals {
     # Use a linux custom image reference if the linux_base_image is defined and contains ":"
     use_linux_image_reference = try(length(split(":", local.configuration_yml["linux_base_image"])[1])>0, false)
 
+    # RedHat:RHEL:8-LVM:8.6.2022102701 
     linux_base_image_reference = {
-        publisher = local.use_linux_image_reference ? split(":", local.configuration_yml["linux_base_image"])[0] : "OpenLogic"
-        offer     = local.use_linux_image_reference ? split(":", local.configuration_yml["linux_base_image"])[1] : "CentOS"
-        sku       = local.use_linux_image_reference ? split(":", local.configuration_yml["linux_base_image"])[2] : "7_9-gen2"
-        version   = local.use_linux_image_reference ? split(":", local.configuration_yml["linux_base_image"])[3] : "latest"
+        publisher = local.use_linux_image_reference ? split(":", local.configuration_yml["linux_base_image"])[0] : "RedHat"
+        offer     = local.use_linux_image_reference ? split(":", local.configuration_yml["linux_base_image"])[1] : "RHEL"
+        sku       = local.use_linux_image_reference ? split(":", local.configuration_yml["linux_base_image"])[2] : "8-LVM"
+        version   = local.use_linux_image_reference ? split(":", local.configuration_yml["linux_base_image"])[3] : "8.6.2022102701"
     }
 
     # Use a linux custom image id if the linux_base_image is defined and contains "/"

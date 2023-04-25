@@ -8,16 +8,20 @@ resource_group: rgsig
 # When using an existing resource group make sure the location match
 # the one of the existing resource group
 use_existing_rg: false
-
 # name of the admin account
 admin_user: azureuser
+virtual_network_name: tmpvnet
+virtual_network_vnet_range: "10.1.1.0/24"
+virtual_network_subnet_name: frontend
+virtual_network_subnet_range: "10.1.1.0/29"
 
 # Pre-defined images
+# x64             RHEL                      RedHat          8-LVM                 RedHat:RHEL:8-LVM:8.6.2022102701                                8.6.202210270
 images:
-  - name: mod-almalinux85-v2-rdma-gpgpu
+  - name: mod-rehel86-v2-hpc
     publisher: modlinux
-    offer: almalinux
-    sku: 8_5-hpc-gen2
+    offer: rhelced
+    sku: 8_6-hpc-gen2
     hyper_v: V2
     os_type: Linux
-    version: 8.5
+    version: 8.6

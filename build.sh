@@ -31,15 +31,6 @@ function check_azcli_version {
 
 check_azcli_version
 
-accepted=$(az vm image terms show --offer almalinux-hpc --publisher almalinux --plan 8_5-hpc-gen2 --query 'accepted' -o tsv)
-if [[ "$accepted" != "true" ]]
- then
-  echo "Azure AlmaLinux marketplace image terms are not accepted, accepting them now"
-  az vm image terms accept --offer almalinux-hpc --publisher almalinux --plan 8_5-hpc-gen2 -o tsv
-else
-  echo "Azure AlmaLinux marketplace image terms already accepted"
-fi
-
 user_type=$(az account show --query user.type -o tsv)
 export TF_VAR_tenant_id=$(az account show -o json | jq -r .tenantId)
 subscription_id=$(az account show --query id -o tsv)

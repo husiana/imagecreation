@@ -6,9 +6,8 @@ resource "local_file" "packer_pip" {
       location        = local.location
       sig_name        = azurerm_shared_image_gallery.sig.name
       private_virtual_network_with_public_ip = false # Never use public IPs for packer VMs
-      virtual_network_name                   = local.create_vnet 
-      virtual_network_subnet_name            = local.create_admin_subnet
-      virtual_network_resource_group_name    = local.resource_group
+      virtual_network_name                   = local.virtual_network_name 
+      virtual_network_subnet_name            = local.virtual_network_subnet_name
     }
   )
   filename = "${local.packer_root_dir}/options.json"
